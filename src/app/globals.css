@@ -1,6 +1,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --accent: #3a3a3af7;
+  --accent-foreground: #ffffff;
+  --accent-foreground-muted: #ffffffb8;
 }
 
 html {

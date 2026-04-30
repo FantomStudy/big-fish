@@ -1,15 +1,15 @@
 .header {
-  background: #3a3a3af7;
+  background: var(--accent);
   margin-bottom: 16px;
 }
 
 .header a {
-  color: #ffffffb8;
+  color: var(--accent-foreground-muted);
   transition: color 0.2s ease;
 }
 
 .header a:hover {
-  color: #fff;
+  color: var(--accent-foreground);
 }
 
 .wrapper {
