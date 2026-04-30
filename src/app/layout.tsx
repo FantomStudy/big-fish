@@ -20,7 +20,7 @@ const RootLayout = ({ children }: LayoutProps<"/">) => {
     <html lang="ru" className={inter.variable}>
       <body>
         <Header />
-        {children}
+        <div className="content">{children}</div>
         <Footer />
       </body>
     </html>
