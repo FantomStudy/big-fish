@@ -1,0 +1,172 @@
+.cartPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 33px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background-color: #d2d2d2;
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 19px;
+  column-gap: 33px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000ba;
+}
+
+.input {
+  border-radius: 10px;
+  width: 201px;
+  height: 42px;
+  background: #eee;
+  color: #0c0c0c;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.input:focus {
+  outline: 2px solid #bbbbbb;
+}
+
+.input::placeholder {
+  color: #0000008a;
+  font-weight: 550;
+}
+
+.deliveryPicker {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.deliveryVariant {
+  padding: 0;
+  display: flex;
+  background: transparent;
+  border: none;
+}
+
+.deliveryVariant img {
+  width: auto;
+  height: 30px;
+}
+
+.deliveryField {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.addButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  gap: 2px;
+  background-color: #eeeeee;
+  color: #005bff;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.addButton span {
+  font-weight: 550;
+  font-size: 16px;
+}
+
+.map {
+  height: 200px;
+  width: 100%;
+  background-color: #747474;
+  border-radius: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 550;
+  color: #000000d1;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 550;
+  color: #000000;
+}
+
+.orderButton {
+  background-color: #e95e00;
+  border: none;
+  border-radius: 16px;
+  height: 54px;
+  color: #eeeeee;
+  font-size: 22px;
+  font-weight: 550;
+}
+
+.cardItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productImage img {
+  border-radius: 10px;
+}
+
+.productImage input {
+  position: absolute;
+}
+
+.productPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
