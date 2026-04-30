@@ -6,6 +6,8 @@ type IconProps = SVGProps<SVGSVGElement>;
 export const TelegramIcon = (props: IconProps) => (
   <svg
     viewBox="0 0 40 40"
+    width={40}
+    height={40}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
@@ -23,6 +25,8 @@ export const TelegramIcon = (props: IconProps) => (
 export const VkIcon = (props: IconProps) => (
   <svg
     viewBox="0 0 40 40"
+    width={40}
+    height={40}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
@@ -41,6 +45,8 @@ export const WbIcon = (props: IconProps) => {
   return (
     <svg
       viewBox="0 0 84 84"
+      width={40}
+      height={40}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
@@ -74,6 +80,8 @@ export const WbIcon = (props: IconProps) => {
 export const OzonIcon = (props: IconProps) => (
   <svg
     viewBox="0 0 120 120"
+    width={40}
+    height={40}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"

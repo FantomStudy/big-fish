@@ -34,6 +34,7 @@ a {
   padding: 0 16px;
 }
 
+/* UTILITY */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -44,4 +45,16 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
 }
