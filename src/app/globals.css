@@ -1,10 +1,12 @@
 :root {
-  --background: #ffffff;
+  --background: #f0f0f0;
   --foreground: #171717;
 
   --accent: #3a3a3af7;
   --accent-foreground: #ffffff;
   --accent-foreground-muted: #ffffffb8;
+
+  --surface: #ffffff;
 }
 
 html,
@@ -68,5 +70,11 @@ a {
 @media (max-width: 768px) {
   .desktop-only {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 8px;
   }
 }
