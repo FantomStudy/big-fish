@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgb(0 0 0 / 0.8);
+  transition: opacity 150ms ease;
+}
+
+.overlay[data-starting-style],
+.overlay[data-ending-style] {
+  opacity: 0;
+}
+
+.content {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--surface);
+  color: var(--foreground);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition:
+    transform 200ms ease-in-out,
+    opacity 200ms ease-in-out;
+}
+
+.content[data-starting-style],
+.content[data-ending-style] {
+  opacity: 0;
+}
+
+.top {
+  inset-inline: 0;
+  top: 0;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.top[data-starting-style],
+.top[data-ending-style] {
+  transform: translateY(-2.5rem);
+}
+
+.bottom {
+  inset-inline: 0;
+  bottom: 0;
+  border-top: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.bottom[data-starting-style],
+.bottom[data-ending-style] {
+  transform: translateY(2.5rem);
+}
+
+.left {
+  inset-block: 0;
+  left: 0;
+  width: 75%;
+  border-right: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.left[data-starting-style],
+.left[data-ending-style] {
+  transform: translateX(-2.5rem);
+}
+
+.right {
+  inset-block: 0;
+  right: 0;
+  width: 75%;
+  border-left: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.right[data-starting-style],
+.right[data-ending-style] {
+  transform: translateX(2.5rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  margin-top: auto;
+  padding: 16px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: currentColor;
+  opacity: 0.7;
+  cursor: pointer;
+  transition:
+    opacity 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.closeButton:focus-visible {
+  opacity: 1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(24 24 24 / 0.2);
+}
+
+.closeButton:disabled {
+  pointer-events: none;
+}
+
+.closeButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 640px) {
+  .left,
+  .right {
+    max-width: 24rem;
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
