@@ -1,0 +1,43 @@
+.card {
+  border-radius: 10px;
+  background-color: var(--surface);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.preview {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 10px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.info {
+  position: relative;
+  padding: 8px 12px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.properties {
+  display: flex;
+  gap: 4px;
+}
+
+.name {
+  font-size: 14px;
+  flex: 1 1 0;
+}
+
+.color {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}

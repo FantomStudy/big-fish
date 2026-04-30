@@ -1,12 +1,21 @@
 :root {
-  --background: #f0f0f0;
+  --background: #f3f3f3;
   --foreground: #171717;
+  --muted: #737373;
 
   --accent: #3a3a3af7;
   --accent-foreground: #ffffff;
   --accent-foreground-muted: #ffffffb8;
 
+  --input: #e5e5e5;
   --surface: #ffffff;
+
+  --primary: #e95e00;
+  --primary-foreground: #ffffff;
+
+  --danger: #dc2626;
+
+  --ring: oklch(0.708 0 0);
 }
 
 html,

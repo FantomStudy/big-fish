@@ -2,7 +2,7 @@ import { ShoppingBagIcon, UserRoundIcon } from "lucide-react";
 import { OzonIcon, TelegramIcon, VkIcon, WbIcon } from "@/components/ui";
 
 export const NAV_LINKS = [
-  { href: "/", label: "Каталог" },
+  { href: "/catalog", label: "Каталог" },
   { href: "/", label: "О нас" },
   { href: "/", label: "Конкурсы" },
   { href: "/", label: "Страница рок-группы" },
@@ -18,6 +18,6 @@ export const SOCIAL_LINKS = [
 ] as const;
 
 export const QUICK_LINKS = [
-  { href: "/", label: "Корзина", icon: ShoppingBagIcon },
+  { href: "/cart", label: "Корзина", icon: ShoppingBagIcon },
   { href: "/", label: "Личный кабинет", icon: UserRoundIcon },
 ] as const;

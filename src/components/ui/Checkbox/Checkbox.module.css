@@ -1,0 +1,60 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--input);
+  border-radius: 4px;
+  outline: none;
+  color: var(--primary-foreground);
+  transition-property: color, border-color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  inset: -8px -12px;
+}
+
+.checkbox:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
+}
+
+.checkbox:disabled,
+.checkbox[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.checkbox[aria-invalid="true"] {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+}
+
+.checkbox[data-checked] {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.checkbox[aria-invalid="true"][aria-checked="true"] {
+  border-color: var(--primary);
+}
+
+.indicator {
+  display: grid;
+  place-content: center;
+  color: currentColor;
+  transition: none;
+}
+
+.indicator > svg {
+  width: 14px;
+  height: 14px;
+}
