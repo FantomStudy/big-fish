@@ -24,25 +24,15 @@ const CartPage = () => {
             <aside className={styles.cardItem}>
               <div className={styles.productImage}>
                 <input type="checkbox" />
-                <Image
-                  width={112}
-                  height={156}
-                  src="/mock/product.png"
-                  alt="product"
-                />
+                <Image width={112} height={156} src="/mock/product.png" alt="product" />
               </div>
               <div>
                 <div>
-                  Мягкие силиконовые приманки для рыбалки твистер 100мм на щуку
-                  судака и окуня
+                  Мягкие силиконовые приманки для рыбалки твистер 100мм на щуку судака и окуня
                 </div>
                 <div>
                   <button>
-                    <HeartIcon
-                      fill="black"
-                      fillOpacity="0.72"
-                      strokeWidth={0}
-                    />
+                    <HeartIcon fill="black" fillOpacity="0.72" strokeWidth={0} />
                   </button>
                   <button>
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -158,25 +148,13 @@ const CartPage = () => {
               <h2>Доставка</h2>
               <div>
                 <div className={styles.deliveryField}>
-                  <label className={styles.label}>
-                    Выберите способ доставки
-                  </label>
+                  <label className={styles.label}>Выберите способ доставки</label>
                   <div className={styles.deliveryPicker}>
                     <button type="button" className={styles.deliveryVariant}>
-                      <Image
-                        width={141.76}
-                        height={38.59}
-                        src="/icons/sdek-logo.svg"
-                        alt="SDEK"
-                      />
+                      <Image width={141.76} height={38.59} src="/icons/sdek-logo.svg" alt="SDEK" />
                     </button>
                     <button type="button" className={styles.deliveryVariant}>
-                      <Image
-                        width={172.19}
-                        height={37.85}
-                        src="/icons/ozon-logo.svg"
-                        alt="OZON"
-                      />
+                      <Image width={172.19} height={37.85} src="/icons/ozon-logo.svg" alt="OZON" />
                     </button>
                   </div>
                 </div>

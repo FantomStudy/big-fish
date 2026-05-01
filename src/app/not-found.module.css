@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.wrapper p {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.number,
+.illustration {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.number {
+  width: 250px;
+}
+.illustration {
+  width: 500px;
+}
+
+@media (max-width: 1024px) {
+  .number {
+    width: 200px;
+  }
+  .illustration {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .number {
+    width: 150px;
+  }
+}

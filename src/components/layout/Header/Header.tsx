@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { NAV_LINKS, QUICK_LINKS, SOCIAL_LINKS } from "./constants";
+import { SOCIAL_LINKS } from "@/lib/config/social";
+import { NAV_LINKS, QUICK_LINKS } from "./constants";
 import styles from "./Header.module.css";
 
 export const Header = () => {

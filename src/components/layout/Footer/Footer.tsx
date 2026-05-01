@@ -1,7 +1,8 @@
 import { PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { BLOCKS, SOCIAL_LINKS } from "./constants";
+import { SOCIAL_LINKS } from "@/lib/config/social";
+import { BLOCKS } from "./constants";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {

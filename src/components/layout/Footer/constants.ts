@@ -1,5 +1,4 @@
 import type { Route } from "next";
-import { OzonIcon, TelegramIcon, VkIcon, WbIcon } from "@/components/ui";
 
 interface Block {
   name: string;
@@ -16,7 +15,7 @@ export const BLOCKS: Block[] = [
       { label: "О нас", href: "/" },
       { label: "Отзывы клиентов", href: "/" },
       { label: "Новости", href: "/" },
-      { label: "Контакты", href: "/" },
+      { label: "Контакты", href: "/contacts" },
     ],
   },
   {
@@ -29,11 +28,4 @@ export const BLOCKS: Block[] = [
       { label: "Персональные данные", href: "/" },
     ],
   },
-] as const;
-
-export const SOCIAL_LINKS = [
-  { href: "/", label: "Telegram", icon: TelegramIcon },
-  { href: "/", label: "ВКонтакте", icon: VkIcon },
-  { href: "/", label: "Wildberries", icon: WbIcon },
-  { href: "/", label: "Ozon", icon: OzonIcon },
 ] as const;
