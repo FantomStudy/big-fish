@@ -1,15 +1,3 @@
-.cartPage {
-  display: flex;
-  flex-direction: column;
-}
-
-.layout {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 32px;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -49,29 +37,6 @@
   font-weight: 600;
   font-size: 16px;
   color: #000000ba;
-}
-
-.input {
-  border-radius: 10px;
-  width: 201px;
-  height: 42px;
-  background: #eee;
-  color: #0c0c0c;
-  padding-left: 15px;
-  padding-right: 10px;
-  border: none;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 550;
-}
-
-.input:focus {
-  outline: 2px solid #bbbbbb;
-}
-
-.input::placeholder {
-  color: #0000008a;
-  font-weight: 550;
 }
 
 .deliveryPicker {
@@ -149,24 +114,4 @@
   color: #eeeeee;
   font-size: 22px;
   font-weight: 550;
-}
-
-.cardItem {
-  display: flex;
-  justify-content: space-between;
-}
-
-.productImage img {
-  border-radius: 10px;
-}
-
-.productImage input {
-  position: absolute;
-}
-
-.productPrice {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
 }

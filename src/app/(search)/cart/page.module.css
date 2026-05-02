@@ -1,0 +1,65 @@
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 33px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background-color: #d2d2d2;
+}
+
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.checkedCount {
+  position: absolute;
+  font-size: 20;
+  margin-left: 5px;
+  color: #0000009c;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.empty h5 {
+  font-size: 27px;
+  font-weight: 550;
+  color: #4b4b4b;
+}
+
+@media (max-width: 1025) {
+  .layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+  }
+}

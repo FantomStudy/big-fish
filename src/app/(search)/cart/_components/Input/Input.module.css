@@ -1,0 +1,22 @@
+.Input {
+  border-radius: 10px;
+  width: 201px;
+  height: 42px;
+  background: #eee;
+  color: #0c0c0c;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.Input:focus {
+  outline: 2px solid #bbbbbb;
+}
+
+.Input::placeholder {
+  color: #0000008a;
+  font-weight: 550;
+}
