@@ -11,8 +11,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "BIG FISH",
+  description: "Лови больше с уникальными приманками",
+  openGraph: {
+    type: "website",
+    url: "https://bigfish.ru",
+    title: "BIG FISH",
+    description: "Лови больше с уникальными приманками",
+  },
 };
 
 const RootLayout = ({ children }: LayoutProps<"/">) => {
