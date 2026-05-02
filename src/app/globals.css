@@ -13,6 +13,8 @@
   --primary: #e95e00;
   --primary-foreground: #ffffff;
 
+  --secondary: #f3e32c;
+
   --danger: #dc2626;
 
   --ring: oklch(0.708 0 0);

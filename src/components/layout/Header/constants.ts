@@ -24,5 +24,5 @@ export const NAV_LINKS: NavLink[] = [
 
 export const QUICK_LINKS: QuickLink[] = [
   { href: "/cart", label: "Корзина", icon: ShoppingBagIcon },
-  { href: "/", label: "Личный кабинет", icon: UserRoundIcon },
+  { href: "/profile", label: "Личный кабинет", icon: UserRoundIcon },
 ] as const;

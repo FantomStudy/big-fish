@@ -1,0 +1,81 @@
+.progress {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+
+  img {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.progressBar {
+  flex: 1;
+  height: 160px;
+  padding: 22px 18px 16px 30px;
+  background-color: #444343;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.progressStages {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.step {
+  width: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step[data-stage="fish"] {
+  width: 124px;
+}
+
+.stepImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 16px 36px;
+}
+
+.connectorDot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background-color: var(--muted);
+}
+
+.connectorDot[data-completed="true"] {
+  background-color: var(--primary);
+}
+
+.step[data-completed="false"] {
+  filter: grayscale(1);
+}
+
+.progressSign {
+  flex: 0 0 auto;
+  margin-right: -22px;
+  z-index: 1;
+}

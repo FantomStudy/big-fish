@@ -1,0 +1,100 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 148px;
+  background: radial-gradient(circle at 0% 0%, #000833 0%, #1d2857 100%);
+  color: var(--accent-foreground);
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:not([data-active="true"]) {
+  filter: grayscale(1);
+}
+
+.cardIcon {
+  position: absolute;
+  left: -32px;
+  top: -8px;
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.cardContent {
+  padding: 32px;
+  padding-left: 160px;
+}
+
+.cardTitle {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  font-size: 14px;
+}
+
+.cardProgress {
+  font-weight: 500;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    min-height: 120px;
+  }
+  .cardIcon {
+    width: 160px;
+    height: 160px;
+  }
+  .cardContent {
+    padding-left: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardIcon {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+  }
+  .cardContent {
+    padding-left: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardIcon {
+    width: 72px;
+    height: 72px;
+    left: 0;
+  }
+  .cardContent {
+    padding: 20px;
+    padding-left: 80px;
+  }
+  .cardProgress {
+    font-size: 14px;
+  }
+}

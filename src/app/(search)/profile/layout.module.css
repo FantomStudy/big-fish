@@ -1,0 +1,17 @@
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+}
+
+.content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto;
+  }
+}

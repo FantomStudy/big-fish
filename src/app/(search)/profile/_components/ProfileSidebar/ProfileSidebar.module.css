@@ -1,0 +1,107 @@
+.card {
+  background-color: var(--surface);
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.finance {
+  position: relative;
+}
+
+.balance,
+.bonus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.balance {
+  background-color: var(--surface);
+  color: var(--primary);
+  padding: 4px 8px;
+  border: 1px solid var(--input);
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.bonus {
+  background-color: var(--accent);
+  color: var(--secondary);
+  padding: 4px 8px;
+  padding-top: 10px;
+  border-radius: 0 0 6px 6px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(calc(100% - 6px));
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.editProfile {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.copyButton {
+  width: 100%;
+  padding: 14px 12px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.copyDescript {
+  font-size: 12px;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link[data-active="true"] {
+  color: var(--primary);
+  font-weight: 500;
+}
