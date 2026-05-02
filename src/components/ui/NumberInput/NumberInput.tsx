@@ -18,19 +18,13 @@ export const NumberInput = ({
       defaultValue={defaultValue}
       max={max}
       min={min}
-      className={styles.field}
+      className={clsx(styles.field, className)}
     >
       <NumberField.Group className={styles.group}>
         <NumberField.Decrement className={styles.decrement}>
           <MinusIcon opacity={0.71} />
         </NumberField.Decrement>
-        <NumberField.Input
-          max={max}
-          min={min}
-          id={id}
-          className={clsx(styles.input, className)}
-          {...props}
-        />
+        <NumberField.Input max={max} min={min} id={id} className={styles.input} {...props} />
         <NumberField.Increment className={styles.increment}>
           <PlusIcon opacity={0.71} />
         </NumberField.Increment>
