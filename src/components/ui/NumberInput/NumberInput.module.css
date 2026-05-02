@@ -1,0 +1,63 @@
+.field {
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+
+  outline: none;
+  border-radius: 10px;
+  transition: outline 0.2s;
+}
+
+.input {
+  border: none;
+  background-color: #eeeeee;
+  height: 28px;
+  flex-grow: 1;
+  text-align: center;
+  color: #000000b5;
+  font-weight: 550;
+  font-size: 17px;
+}
+
+.decrement {
+  background-color: #eeeeee;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.increment {
+  background-color: #eeeeee;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.group:focus-within {
+  box-shadow: 0 0 0 2px rgba(106, 106, 106, 0.25);
+  outline: none;
+}
+
+.input:focus,
+.decrement:focus,
+.increment:focus {
+  outline: none;
+}
