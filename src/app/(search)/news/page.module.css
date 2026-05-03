@@ -1,0 +1,11 @@
+.newsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(444px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
