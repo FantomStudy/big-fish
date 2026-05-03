@@ -41,8 +41,7 @@
 }
 
 .button {
-  border-color: #636363;
-  border-width: 2px;
+  border: 2px solid #636363;
   padding: 14px 12px;
   height: 47px;
   border-radius: 23px;
