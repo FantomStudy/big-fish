@@ -62,7 +62,7 @@
 .copyButton {
   width: 100%;
   padding: 14px 12px;
-  height: auto;
+  height: auto !important;
   display: flex;
   flex-direction: column;
   gap: 4;

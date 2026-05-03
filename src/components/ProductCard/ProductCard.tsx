@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Typography } from "../ui/Typography";
 import styles from "./ProductCard.module.css";
 
 interface ProductCardProps {
@@ -18,10 +19,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </div>
 
       <div className={styles.info}>
-        <p className={styles.price}>{product.price} ₽</p>
+        <Typography variant="body-lg" className={styles.price}>
+          {product.price} ₽
+        </Typography>
 
         <div className={styles.properties}>
-          <p className={styles.name}>{product.name}</p>
+          <Typography variant="body-sm" className={styles.name}>
+            {product.name}
+          </Typography>
           <div className={styles.color} style={{ background: product.color }} />
         </div>
       </div>

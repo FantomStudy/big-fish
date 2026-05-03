@@ -1,0 +1,38 @@
+.field {
+  display: flex;
+  gap: 4px;
+}
+
+.field[data-orientation="vertical"] {
+  flex-direction: column;
+}
+
+.field > :global(.sr-only) {
+  width: auto;
+}
+
+.label {
+  width: fit-content;
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.field[data-disabled="true"] .label {
+  opacity: 0.5;
+}
+
+.error {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: var(--danger);
+}
+
+.errorList {
+  margin: 0 0 0 1rem;
+  display: flex;
+  list-style: disc;
+  flex-direction: column;
+  gap: 0.25rem;
+}

@@ -1,7 +1,13 @@
 import clsx from "clsx";
 import styles from "./Typography.module.css";
 
-export type TypographyVariant = "heading-1" | "heading-2" | "body-lg" | "body";
+export type TypographyVariant =
+  | "heading-1"
+  | "heading-2"
+  | "heading-3"
+  | "body-lg"
+  | "body"
+  | "body-sm";
 
 type TypographyProps<T extends React.HTMLElementType> = {
   tag?: T;

@@ -6,44 +6,41 @@
   border: 1px solid var(--input);
   border-radius: 8px;
   outline: none;
-  background-color: transparent;
   color: var(--foreground);
   font-size: 16px;
   line-height: 1.5;
   transition-property: color, border-color, background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
 
-.input::placeholder {
-  color: var(--muted);
-}
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
 
-.input::file-selector-button {
-  display: inline-flex;
-  height: 24px;
-  border: 0;
-  background-color: transparent;
-  color: var(--foreground);
-  font-size: 14px;
-  font-weight: 500;
-}
+  &::file-selector-button {
+    display: inline-flex;
+    height: 24px;
+    border: 0;
+    background-color: transparent;
+    color: var(--foreground);
+    font-size: 14px;
+    font-weight: 500;
+  }
 
-.input:focus-visible {
-  border-color: var(--ring);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
-}
+  &:focus-visible {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
+  }
 
-.input:disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-  background-color: color-mix(in srgb, var(--input) 50%, transparent);
-  opacity: 0.5;
-}
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 
-.input[aria-invalid="true"] {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+  &[aria-invalid="true"] {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+  }
 }
 
 @media (min-width: 768px) {

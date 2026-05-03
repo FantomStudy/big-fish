@@ -1,26 +1,22 @@
 import { ProductCard } from "@/components/ProductCard";
+import { Card } from "@/components/ui/Card";
 import { Grid } from "@/components/ui/Grid";
+import { getProducts } from "@/mock/products";
 import { Filters } from "./_components/Filters";
 import styles from "./page.module.css";
 
 const CatalogPage = () => {
+  const products = getProducts();
+
   return (
     <div className={styles.layout}>
-      <div className={styles.menu}>
+      <Card className={styles.menu}>
         <Filters />
-      </div>
+      </Card>
 
       <Grid>
-        {Array.from({ length: 50 }).map((_, index) => (
-          <ProductCard
-            key={index}
-            product={{
-              name: "Cиликоновая приманка",
-              price: 411,
-              imageUrl: "/mock/product.png",
-              color: "#60CBFF",
-            }}
-          />
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </Grid>
     </div>

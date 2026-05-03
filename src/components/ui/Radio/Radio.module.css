@@ -15,38 +15,38 @@
   border-radius: 9999px;
   outline: none;
   color: var(--primary-foreground);
-}
 
-.item::after {
-  content: "";
-  position: absolute;
-  inset: -8px -12px;
-}
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -8px -12px;
+  }
 
-.item:focus-visible {
-  border-color: var(--ring);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
-}
+  &:focus-visible {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
+  }
 
-.item:disabled,
-.item[data-disabled] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
+  &:disabled,
+  &[data-disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 
-.item[aria-invalid="true"] {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
-}
+  &[aria-invalid="true"] {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+  }
 
-.item[data-checked] {
-  border-color: var(--primary);
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
+  &[data-checked] {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
 
-.item[aria-invalid="true"][aria-checked="true"] {
-  border-color: var(--primary);
+  &[aria-invalid="true"][aria-checked="true"] {
+    border-color: var(--primary);
+  }
 }
 
 .indicator {

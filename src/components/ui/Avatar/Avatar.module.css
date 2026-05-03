@@ -6,7 +6,7 @@
   border-radius: 100%;
   user-select: none;
   font-weight: 500;
-  background-color: var(--background);
+  background-color: var(--muted);
   color: var(--foreground);
   font-size: 1rem;
   line-height: 1;
@@ -29,6 +29,15 @@
 }
 
 /* Sizes */
+.sm {
+  width: 36px;
+  height: 36px;
+
+  .fallback {
+    font-size: 16px;
+  }
+}
+
 .md {
   width: 64px;
   height: 64px;

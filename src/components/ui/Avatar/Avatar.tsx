@@ -5,7 +5,7 @@ import styles from "./Avatar.module.css";
 interface AvatarProps extends AvatarBase.Root.Props {
   src: string | null;
   fallback: string;
-  size?: "md" | "lg";
+  size?: "sm" | "md" | "lg";
 }
 
 export const Avatar = ({ size = "md", src, fallback, className, ...props }: AvatarProps) => {

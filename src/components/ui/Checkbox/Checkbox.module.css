@@ -10,41 +10,41 @@
   border-radius: 4px;
   outline: none;
   color: var(--primary-foreground);
+  background-color: var(--surface);
   transition-property: color, border-color, background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
 
-.checkbox::after {
-  content: "";
-  position: absolute;
-  inset: -8px -12px;
-}
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -8px -12px;
+  }
 
-.checkbox:focus-visible {
-  border-color: var(--ring);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
-}
+  &:focus-visible {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
+  }
 
-.checkbox:disabled,
-.checkbox[data-disabled] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
+  &:disabled,
+  &[data-disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 
-.checkbox[aria-invalid="true"] {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
-}
+  &[aria-invalid="true"] {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+  }
 
-.checkbox[data-checked] {
-  border-color: var(--primary);
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
-
-.checkbox[aria-invalid="true"][aria-checked="true"] {
-  border-color: var(--primary);
+  &[data-checked] {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  &[aria-invalid="true"][aria-checked="true"] {
+    border-color: var(--primary);
+  }
 }
 
 .indicator {
@@ -52,9 +52,9 @@
   place-content: center;
   color: currentColor;
   transition: none;
-}
 
-.indicator > svg {
-  width: 14px;
-  height: 14px;
+  & > svg {
+    width: 14px;
+    height: 14px;
+  }
 }

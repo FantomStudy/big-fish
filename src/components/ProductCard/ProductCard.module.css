@@ -22,7 +22,6 @@
 }
 
 .price {
-  font-size: 18px;
   font-weight: 500;
 }
 
@@ -32,8 +31,11 @@
 }
 
 .name {
-  font-size: 14px;
   flex: 1 1 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .color {

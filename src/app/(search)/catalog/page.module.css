@@ -2,18 +2,13 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 16px;
-}
-
-.menu {
-  background-color: var(--surface);
-  border-radius: 10px;
-  padding: 20px 24px;
-  height: fit-content;
+  align-items: start;
 }
 
 @media (max-width: 768px) {
   .layout {
     display: flex;
+    align-items: unset;
     flex-direction: column;
     grid-template-columns: auto;
   }

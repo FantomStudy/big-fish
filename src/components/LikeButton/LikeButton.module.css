@@ -1,0 +1,10 @@
+.toggle[data-pressed] {
+  &:not(:hover) {
+    background-color: transparent;
+  }
+
+  & > .icon {
+    color: red;
+    fill: currentColor;
+  }
+}

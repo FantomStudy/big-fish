@@ -1,9 +1,11 @@
 "use client";
 
 import { Checkbox } from "@/components/ui/Checkbox";
+import { Field, FieldLabel } from "@/components/ui/Field";
 import { Input } from "@/components/ui/Input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/Radio";
 import { Slider } from "@/components/ui/Slider";
+import { Typography } from "@/components/ui/Typography";
 import { CATEGORIES, COLORS, USAGE_TYPE } from "./constants";
 import styles from "./Filters.module.css";
 
@@ -11,62 +13,64 @@ export const Filters = () => {
   return (
     <div className={styles.filters}>
       <div className={styles.block}>
-        <p className={styles.title}>Категория</p>
+        <Typography>Категория</Typography>
         <RadioGroup>
           {CATEGORIES.map((category) => (
-            <label key={category.id} className={styles.radio}>
-              <RadioGroupItem value={category.id} />
-              {category.name}
-            </label>
+            <Field key={category.id}>
+              <FieldLabel>
+                <RadioGroupItem value={category.id} />
+                {category.name}
+              </FieldLabel>
+            </Field>
           ))}
         </RadioGroup>
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Цена</p>
+        <Typography>Цена</Typography>
         <div className={styles.inputs}>
-          <label>
-            От
+          <Field>
+            <FieldLabel>От</FieldLabel>
             <Input />
-          </label>
-
-          <label>
-            До
+          </Field>
+          <Field>
+            <FieldLabel>До</FieldLabel>
             <Input />
-          </label>
+          </Field>
         </div>
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Тип применения</p>
+        <Typography>Тип применения</Typography>
         <RadioGroup>
           {USAGE_TYPE.map((type) => (
-            <label key={type.id} className={styles.radio}>
-              <RadioGroupItem value={type.id} />
-              {type.name}
-            </label>
+            <Field key={type.id}>
+              <FieldLabel>
+                <RadioGroupItem value={type.id} />
+                {type.name}
+              </FieldLabel>
+            </Field>
           ))}
         </RadioGroup>
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Длина, мм</p>
+        <Typography>Длина, мм</Typography>
         <Slider min={1} max={200} defaultValue={[1, 200]} />
         <div className={styles.inputs}>
-          <label>
-            От
-            <Input type="number" />
-          </label>
-
-          <label>
-            До
-            <Input type="number" />
-          </label>
+          <Field>
+            <FieldLabel>От</FieldLabel>
+            <Input />
+          </Field>
+          <Field>
+            <FieldLabel>До</FieldLabel>
+            <Input />
+          </Field>
         </div>
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Цвет</p>
+        <Typography>Цвет</Typography>
         <div className={styles.colors}>
           {COLORS.map((color) => (
             <Checkbox
@@ -80,34 +84,33 @@ export const Filters = () => {
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Количество в упаковке, шт</p>
+        <Typography>Количество в упаковке, шт</Typography>
         <Slider min={1} max={4} defaultValue={[1, 4]} />
         <div className={styles.inputs}>
-          <label>
-            От
-            <Input type="number" />
-          </label>
-
-          <label>
-            До
-            <Input type="number" />
-          </label>
+          <Field>
+            <FieldLabel>От</FieldLabel>
+            <Input />
+          </Field>
+          <Field>
+            <FieldLabel>До</FieldLabel>
+            <Input />
+          </Field>
         </div>
       </div>
 
       <div className={styles.block}>
-        <p className={styles.title}>Вес, г</p>
+        <Typography>Вес, г</Typography>
         <Slider min={1} max={40} defaultValue={[1, 40]} />
-        <div className={styles.inputs}>
-          <label>
-            От
-            <Input type="number" />
-          </label>
 
-          <label>
-            До
-            <Input type="number" />
-          </label>
+        <div className={styles.inputs}>
+          <Field>
+            <FieldLabel>От</FieldLabel>
+            <Input />
+          </Field>
+          <Field>
+            <FieldLabel>До</FieldLabel>
+            <Input />
+          </Field>
         </div>
       </div>
     </div>
