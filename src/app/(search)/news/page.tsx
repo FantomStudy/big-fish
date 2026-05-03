@@ -1,5 +1,8 @@
+"use client";
+
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { NewsCard } from "@/components/NewsCard";
 import { Grid } from "@/components/ui/Grid";
 import styles from "./page.module.css";
@@ -33,6 +36,8 @@ const CARDS = [
 ] as const;
 
 const NewsPage = () => {
+  const router = useRouter();
+
   return (
     <div className={clsx("container", styles.newsPage)}>
       <Image
@@ -45,6 +50,7 @@ const NewsPage = () => {
       <Grid className={styles.grid}>
         {CARDS.map((el, i) => (
           <NewsCard
+            onMoreClick={() => router.push(`/news/${i}`)}
             key={i}
             news={{
               type: el.type,

@@ -1,0 +1,44 @@
+.newsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 28px 31px;
+}
+
+.dateGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dateGroup h1 {
+  font-size: 27px;
+  font-weight: 600;
+  color: black;
+}
+
+.dateGroup span {
+  color: #00000082;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+}

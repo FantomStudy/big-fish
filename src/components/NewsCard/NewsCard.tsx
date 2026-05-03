@@ -10,6 +10,7 @@ interface NewsCardProps {
     imageUrl: string;
     type: "poster" | "default" | "small";
   };
+  onMoreClick?: () => void;
 }
 
 const variants = {
@@ -18,7 +19,7 @@ const variants = {
   small: { descriptionClassName: styles.hide, contentClassName: "", imageHeight: 296 },
 } as const;
 
-export const NewsCard = ({ news }: NewsCardProps) => {
+export const NewsCard = ({ news, onMoreClick }: NewsCardProps) => {
   return (
     <aside className={styles.card}>
       <Image
@@ -33,7 +34,7 @@ export const NewsCard = ({ news }: NewsCardProps) => {
       </div>
       <div className={styles.cardFooter}>
         <span className={styles.date}>22.03.2026</span>
-        <Button variant="outline" className={styles.button}>
+        <Button onClick={onMoreClick} variant="outline" className={styles.button}>
           Читать далее
         </Button>
       </div>
