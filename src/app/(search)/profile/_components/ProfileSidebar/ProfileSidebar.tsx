@@ -1,35 +1,18 @@
 "use client";
 
+import type { User } from "@/mock/user";
 import { GiftIcon, LinkIcon, WalletIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Avatar } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { Typography } from "@/components/ui/Typography";
+import { LINKS } from "./constants";
 import styles from "./ProfileSidebar.module.css";
 
-const LINKS = [
-  {
-    label: "Мои заказы",
-    href: "/profile",
-  },
-  {
-    label: "Достижения",
-    href: "/profile/achievements",
-  },
-  {
-    label: "Избранное",
-    href: "/profile/favorites",
-  },
-];
-
 interface ProfileSidebarProps {
-  user: {
-    name: string;
-    avatarUrl: string;
-    balance: number;
-    bonus: number;
-    referalLink: string;
-  };
+  user: User;
 }
 
 export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
@@ -40,8 +23,8 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
+    <Card className="stack">
+      <header className={styles.header}>
         <Avatar src={user.avatarUrl} fallback={user.avatarUrl} />
 
         <div className={styles.finance}>
@@ -54,10 +37,10 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
             <GiftIcon />
           </div>
         </div>
-      </div>
+      </header>
 
       <div>
-        <p>{user.name}</p>
+        <Typography>{user.name}</Typography>
         <Link href="/cart" className={styles.editProfile}>
           Изменить профиль
         </Link>
@@ -70,7 +53,7 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
         <div className={styles.copyDescript}>+50 БигФишек за приглашение друга</div>
       </Button>
 
-      <nav className={styles.nav}>
+      <nav className="stack-sm">
         {LINKS.map((link) => (
           <Link
             key={link.href}
@@ -81,9 +64,8 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
             {link.label}
           </Link>
         ))}
-
         <Button variant="link">Выход</Button>
       </nav>
-    </div>
+    </Card>
   );
 };

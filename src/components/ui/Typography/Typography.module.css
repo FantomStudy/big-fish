@@ -1,13 +1,16 @@
 .typography {
   margin: 0;
-  color: inherit;
 
   sup {
-    font-size: 18px;
+    font-size: 0.7em;
+    line-height: 0;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
     color: var(--muted-foreground);
   }
 }
-
+/* 
 .heading-1 {
   font-size: 32px;
   line-height: 1;
@@ -35,8 +38,8 @@
 }
 
 .body {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  line-height: 1.55;
   font-weight: 400;
 }
 
@@ -44,9 +47,37 @@
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
+}*/
+
+.title {
+  font-size: var(--text-title);
+  line-height: var(--lh-title);
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
+.title-md {
+  font-size: var(--text-title-md);
+  line-height: var(--lh-title);
+  font-weight: 600;
+}
+
+.title-sm {
+  font-size: var(--text-title-sm);
+  line-height: var(--lh-title);
+  font-weight: 600;
+}
+
+.body {
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+}
+
+.body-sm {
+  font-size: var(--text-body-sm);
+  line-height: var(--lh-body);
+}
+
+/* @media (max-width: 1024px) {
   .typography sup {
     font-size: 14px;
   }
@@ -64,7 +95,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .typography sup {
     font-size: 12px;
   }
@@ -84,3 +115,18 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 500px) {
+  .heading-1 {
+    font-size: 20px;
+  }
+  .heading-2 {
+    font-size: 16px;
+  }
+  .heading-3 {
+    font-size: 14px;
+  }
+  .body-lg {
+    font-size: 12px;
+  }
+} */

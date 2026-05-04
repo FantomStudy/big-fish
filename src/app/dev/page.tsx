@@ -15,6 +15,14 @@ const DevPage = () => {
   return (
     <div className={clsx("container", styles.page)}>
       <div>
+        <Typography variant="title">Hello</Typography>
+        <Typography variant="title-md">Hello</Typography>
+        <Typography variant="title-sm">Hello</Typography>
+        <Typography variant="body">Hello</Typography>
+        <Typography variant="body-sm">Hello</Typography>
+      </div>
+
+      {/* <div>
         <Typography variant="heading-2">Avatar</Typography>
 
         <div className={styles.row}>
@@ -157,7 +165,7 @@ const DevPage = () => {
             <HeartIcon className={styles.toggleIcon} /> Toggle
           </Toggle>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -11,8 +11,8 @@ import styles from "./Filters.module.css";
 
 export const Filters = () => {
   return (
-    <div className={styles.filters}>
-      <div className={styles.block}>
+    <div className="stack-xl">
+      <div className="stack">
         <Typography>Категория</Typography>
         <RadioGroup>
           {CATEGORIES.map((category) => (
@@ -26,7 +26,7 @@ export const Filters = () => {
         </RadioGroup>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Цена</Typography>
         <div className={styles.inputs}>
           <Field>
@@ -40,7 +40,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Тип применения</Typography>
         <RadioGroup>
           {USAGE_TYPE.map((type) => (
@@ -54,7 +54,7 @@ export const Filters = () => {
         </RadioGroup>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Длина, мм</Typography>
         <Slider min={1} max={200} defaultValue={[1, 200]} />
         <div className={styles.inputs}>
@@ -69,7 +69,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Цвет</Typography>
         <div className={styles.colors}>
           {COLORS.map((color) => (
@@ -83,7 +83,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Количество в упаковке, шт</Typography>
         <Slider min={1} max={4} defaultValue={[1, 4]} />
         <div className={styles.inputs}>
@@ -98,7 +98,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className={styles.block}>
+      <div className="stack">
         <Typography>Вес, г</Typography>
         <Slider min={1} max={40} defaultValue={[1, 40]} />
 

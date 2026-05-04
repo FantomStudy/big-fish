@@ -1,7 +1,7 @@
 import type { Product } from "@/mock/products";
 import { TrashIcon } from "lucide-react";
 import Image from "next/image";
-import { LikeButton } from "@/components/LikeButton";
+import { LikeButton } from "@/components/product/LikeButton";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Checkbox } from "@/components/ui/Checkbox";
@@ -39,7 +39,7 @@ export const CartItem = ({ product }: CartItemProps) => {
         </div>
 
         <div className={styles.amount}>
-          <Typography variant="heading-3" className={styles.price}>
+          <Typography variant="title-sm" className={styles.price}>
             {toCurrency(product.price)}
           </Typography>
           <NumberInput />

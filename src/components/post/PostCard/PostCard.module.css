@@ -1,0 +1,32 @@
+.card {
+  width: 100%;
+  background-color: var(--surface);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--muted-foreground);
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--text-title-sm);
+  }
+}

@@ -3,13 +3,11 @@ import { ProgressBar } from "./_components/ProgressBar";
 
 const ProfilePage = () => {
   return (
-    <main>
-      <div>
-        <Typography variant="heading-2" tag="h2">
-          Прогресс
-        </Typography>
-        <ProgressBar />
-      </div>
+    <main className="stack">
+      <Typography variant="title-md" tag="h2">
+        Прогресс
+      </Typography>
+      <ProgressBar />
     </main>
   );
 };

@@ -7,8 +7,8 @@ import styles from "./OrderSummary.module.css";
 
 export const OrderSummary = () => {
   return (
-    <div className={styles.summary}>
-      <div className={styles.calculations}>
+    <div className="stack">
+      <div>
         <Typography variant="body-sm" className={styles.priceRow}>
           Стоимость товаров <span>{toCurrency(0)}</span>
         </Typography>
@@ -27,10 +27,9 @@ export const OrderSummary = () => {
         <Input placeholder="Промокод" />
       </Field>
 
-      <div className={styles.priceRow}>
-        <Typography variant="heading-3">Итого</Typography>
-        <Typography variant="heading-3">{toCurrency(0)}</Typography>
-      </div>
+      <Typography variant="title-sm" className={styles.priceRow}>
+        Итого <span>{toCurrency(0)}</span>
+      </Typography>
 
       <Button type="submit">Заказать</Button>
     </div>

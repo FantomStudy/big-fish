@@ -1,3 +1,5 @@
+@import "@/styles/utils.css";
+
 :root {
   --background: #f5f5f5;
   --foreground: #171717;
@@ -27,6 +29,14 @@
   --radius-xl: 12px;
   --radius-2xl: 16px;
   --radius-full: calc(infinity * 1px);
+
+  --text-title: clamp(24px, 2.5vw, 32px);
+  --text-title-md: clamp(22px, 1.5vw, 24px);
+  --text-title-sm: clamp(18px, 1vw, 20px);
+  --text-body: 16px;
+  --text-body-sm: 14px;
+  --lh-title: 1.2;
+  --lh-body: 1.5;
 }
 
 html,
@@ -66,31 +76,6 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-/* UTILITY */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .desktop-only {
-    display: none;
-  }
 }
 
 @media (max-width: 500px) {

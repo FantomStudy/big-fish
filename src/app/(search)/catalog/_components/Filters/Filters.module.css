@@ -1,29 +1,7 @@
-.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.block {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.radio {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .inputs {
   display: flex;
   gap: 8px;
   color: var(--muted-foreground);
-
-  input {
-    width: 100%;
-  }
 }
 
 .colors {

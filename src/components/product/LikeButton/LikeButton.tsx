@@ -1,5 +1,5 @@
 import { HeartIcon } from "lucide-react";
-import { Toggle } from "../ui/Toggle";
+import { Toggle } from "@/components/ui/Toggle";
 import styles from "./LikeButton.module.css";
 
 export const LikeButton = () => {

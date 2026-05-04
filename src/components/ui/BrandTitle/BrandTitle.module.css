@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+  .news {
+    width: 240px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    width: 200px;
+  }
+}

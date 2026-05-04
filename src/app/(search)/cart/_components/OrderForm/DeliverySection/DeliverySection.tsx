@@ -9,10 +9,10 @@ import styles from "./DeliverySection.module.css";
 
 export const DeliverySection = () => {
   return (
-    <section>
-      <Typography variant="heading-2">Доставка</Typography>
+    <section className="stack">
+      <Typography variant="title-md">Доставка</Typography>
 
-      <div className={styles.fields}>
+      <div className="stack-sm">
         <Field>
           <FieldLabel>Выберите способ доставки</FieldLabel>
           <ToggleGroup className={styles.deliveryToggle}>

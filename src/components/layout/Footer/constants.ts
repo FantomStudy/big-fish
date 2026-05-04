@@ -14,7 +14,7 @@ export const BLOCKS: Block[] = [
     links: [
       { label: "О нас", href: "/" },
       { label: "Отзывы клиентов", href: "/" },
-      { label: "Новости", href: "/" },
+      { label: "Новости", href: "/news" },
       { label: "Контакты", href: "/contacts" },
     ],
   },

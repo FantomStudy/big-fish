@@ -7,8 +7,17 @@
   margin-top: 100px;
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  align-items: start;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+  }
 }

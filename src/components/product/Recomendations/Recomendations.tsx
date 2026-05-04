@@ -1,22 +1,22 @@
 import { getProducts } from "@/mock/products";
+import { Typography } from "../../ui/Typography";
 import { ProductCard } from "../ProductCard";
-import { Grid } from "../ui/Grid";
-import { Typography } from "../ui/Typography";
+import { ProductGrid } from "../ProductGrid";
 
 export const Recomentaions = () => {
   const products = getProducts();
 
   return (
-    <div className="container">
-      <Typography variant="heading-1" tag="h2">
+    <div className="stack">
+      <Typography variant="title" tag="h2">
         Возможно вам понравится
       </Typography>
 
-      <Grid>
+      <ProductGrid>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </Grid>
+      </ProductGrid>
     </div>
   );
 };

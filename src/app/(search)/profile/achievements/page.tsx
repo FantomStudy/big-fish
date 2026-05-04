@@ -8,21 +8,22 @@ const AchievementsPage = () => {
   const recieved = ACHIEVEMENTS.filter((ach) => ach.progress === ach.total);
 
   return (
-    <main className={styles.page}>
-      <div>
-        <Typography variant="heading-2" tag="h2">
+    <main className="stack-xl">
+      <div className="stack">
+        <Typography variant="title-md" tag="h2">
           Прогресс
         </Typography>
         <ProgressBar />
       </div>
 
-      <div>
-        <Typography variant="heading-2" tag="h2">
+      <div className="stack">
+        <Typography variant="title-md" tag="h1">
           Достижения{" "}
           <sup>
             {recieved.length} из {ACHIEVEMENTS.length}
           </sup>
         </Typography>
+
         <div className={styles.grid}>
           {ACHIEVEMENTS.map((achievement) => (
             <div

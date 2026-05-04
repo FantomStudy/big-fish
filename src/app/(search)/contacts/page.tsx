@@ -6,10 +6,10 @@ import styles from "./page.module.css";
 const ContactsPage = () => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.info}>
-        <Image src="/contacts/contacts.svg" alt="Contacts" width={280} height={100} priority />
+      <div className="stack-xl">
+        <Image src="/contacts/contacts.svg" alt="Контакты" width={280} height={100} priority />
 
-        <div className={styles.links}>
+        <div className="stack">
           <a href="tel:+79198457646" className={styles.link}>
             <PhoneCall /> +7 919 845 7646
           </a>
@@ -36,7 +36,7 @@ const ContactsPage = () => {
         <Image
           className={styles.sign}
           src="/contacts/hero-sign.svg"
-          alt="Call us from 10:00 to 18:00"
+          alt="Звони нам с 10:00 до 18:00"
           width={321}
           height={145}
           priority

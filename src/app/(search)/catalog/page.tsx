@@ -1,6 +1,6 @@
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard } from "@/components//product/ProductCard";
+import { ProductGrid } from "@/components/product/ProductGrid";
 import { Card } from "@/components/ui/Card";
-import { Grid } from "@/components/ui/Grid";
 import { getProducts } from "@/mock/products";
 import { Filters } from "./_components/Filters";
 import styles from "./page.module.css";
@@ -10,15 +10,15 @@ const CatalogPage = () => {
 
   return (
     <div className={styles.layout}>
-      <Card className={styles.menu}>
+      <Card className="desktop-only">
         <Filters />
       </Card>
 
-      <Grid>
+      <ProductGrid>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </Grid>
+      </ProductGrid>
     </div>
   );
 };

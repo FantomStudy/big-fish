@@ -1,28 +1,22 @@
-import { ProductCard } from "@/components/ProductCard";
-import { Grid } from "@/components/ui/Grid";
+import { ProductCard } from "@/components/product/ProductCard";
+import { ProductGrid } from "@/components/product/ProductGrid";
 import { Typography } from "@/components/ui/Typography";
+import { getProducts } from "@/mock/products";
 
 const FavoritesPage = () => {
+  const products = getProducts();
   return (
-    <div>
-      <Typography variant="heading-1" tag="h1">
-        Избранное <sup>50</sup>
+    <main className="stack">
+      <Typography variant="title" tag="h1">
+        Избранное <sup>{products.length}</sup>
       </Typography>
 
-      <Grid>
-        {Array.from({ length: 50 }).map((_, index) => (
-          <ProductCard
-            key={index}
-            product={{
-              name: "Cиликоновая приманка",
-              price: 411,
-              imageUrl: "/mock/product.png",
-              color: "#60CBFF",
-            }}
-          />
+      <ProductGrid>
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
-      </Grid>
-    </div>
+      </ProductGrid>
+    </main>
   );
 };
 

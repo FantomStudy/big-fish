@@ -1,15 +1,14 @@
 import { Field, FieldLabel } from "@/components/ui/Field";
 import { Input } from "@/components/ui/Input";
 import { Typography } from "@/components/ui/Typography";
-import styles from "./UserSection.module.css";
 
 // TODO: Возможная замена на данные аккаунта, уточнить
 export const UserSection = () => {
   return (
-    <section>
-      <Typography variant="heading-2">Покупатель</Typography>
+    <div className="stack">
+      <Typography variant="title-md">Покупатель</Typography>
 
-      <div className={styles.fields}>
+      <div className="stack-sm">
         <Field>
           <FieldLabel>Фамилия</FieldLabel>
           <Input />
@@ -35,6 +34,6 @@ export const UserSection = () => {
           <Input type="email" />
         </Field>
       </div>
-    </section>
+    </div>
   );
 };

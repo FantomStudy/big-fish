@@ -4,13 +4,14 @@ import type { Product } from "@/mock/products";
 import Image from "next/image";
 import { Typography } from "@/components/ui/Typography";
 import { useCartContext } from "../../_contexts/CartContext";
+import { OrderForm } from "../OrderForm";
 import { CartItem } from "./CartItem";
 import styles from "./CartList.module.css";
 
 const EmptyScreen = () => {
   return (
     <div className={styles.empty}>
-      <Typography variant="heading-2">Похоже в корзине пусто...</Typography>
+      <Typography variant="title-md">Похоже в корзине пусто...</Typography>
       <Image
         src="/cart/illustration.svg"
         width={359}
@@ -29,20 +30,24 @@ export const CartList = ({ products }: CartListProps) => {
   const { checkedProducts } = useCartContext();
 
   return (
-    <div>
-      <Typography variant="heading-1" tag="h1">
-        Корзина <sup>{checkedProducts.length}</sup>
+    <div className="stack">
+      <Typography variant="title" tag="h1">
+        Корзина<sup>{checkedProducts.length}</sup>
       </Typography>
 
-      {products.length === 0 ? (
-        <EmptyScreen />
-      ) : (
-        <div className={styles.list}>
-          {products.map((product) => (
-            <CartItem key={product.id} product={product} />
-          ))}
-        </div>
-      )}
+      <div className={styles.layout}>
+        {products.length === 0 ? (
+          <EmptyScreen />
+        ) : (
+          <div className="stack-sm">
+            {products.map((product) => (
+              <CartItem key={product.id} product={product} />
+            ))}
+          </div>
+        )}
+
+        <OrderForm />
+      </div>
     </div>
   );
 };
