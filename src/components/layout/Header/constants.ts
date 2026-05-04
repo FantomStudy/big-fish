@@ -17,7 +17,7 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/catalog", label: "Каталог" },
   { href: "/", label: "О нас" },
   { href: "/", label: "Конкурсы" },
-  { href: "/", label: "Страница рок-группы" },
+  { href: "/rock-group", label: "Страница рок-группы" },
   { href: "/news", label: "Новости" },
   { href: "/contacts", label: "Контакты" },
 ] as const;
