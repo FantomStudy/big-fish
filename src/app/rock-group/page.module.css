@@ -2,6 +2,10 @@
   margin-top: -16px;
 }
 
+.newsSection {
+  margin-bottom: 30px;
+}
+
 .backStageSection {
   display: flex;
   height: 680px;
@@ -76,7 +80,7 @@
 
 .tracks {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(463px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
   gap: 25px;
   justify-items: center;
 }

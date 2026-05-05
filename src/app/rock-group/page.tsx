@@ -41,7 +41,7 @@ const RockGroupPage = () => {
   return (
     <div className={styles.content}>
       <Slider />
-      <div className={clsx("container stack")}>
+      <div className={clsx("container stack", styles.newsSection)}>
         <SearchBar />
         <BrandTitle.News />
         <PostGrid>
@@ -72,7 +72,7 @@ const RockGroupPage = () => {
           <BrandTitle.OurTracks />
           <div className={styles.tracks}>
             {Array.from({ length: 6 }).map((_, i) => (
-              <Image key={i} alt="Трек" src="/merch/track.png" width={463} height={463} />
+              <Image key={i} alt="Трек" src="/merch/track.png" width={385} height={385} />
             ))}
           </div>
         </div>
