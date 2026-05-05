@@ -1,3 +1,82 @@
 .content {
   margin-top: -16px;
 }
+
+.backStageSection {
+  display: flex;
+  height: 680px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.backStageText {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.backStageText h1 {
+  color: black;
+  font-weight: 550;
+  font-size: 27px;
+}
+
+.backStageText p {
+  max-width: 545px;
+  color: black;
+  font-weight: 450;
+  font-size: 20px;
+}
+
+.ourMerch {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 23px;
+}
+
+.ourMerchCard {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 436px;
+  justify-content: end;
+}
+
+.ourMerchCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ourMerchCardContent h2 {
+  font-size: 20px;
+  font-weight: 550;
+  color: #fff;
+}
+
+.ourMerchCardContent p {
+  font-size: 16px;
+  font-weight: 450;
+  color: #fff;
+}
+
+.souvenirs {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: #000000bd;
+}
+
+.souvenirsContainer {
+  gap: 60px;
+}
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(463px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
