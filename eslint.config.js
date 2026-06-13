@@ -1,15 +1,15 @@
 import antfu from "@antfu/eslint-config";
 
-const eslintConfig = antfu(
+export default antfu(
   {
     stylistic: false,
     markdown: false,
+    perfectionist: false,
     react: true,
-    nextjs: true,
     ignores: ["package.json"],
   },
   {
-    name: "fantomstudy/rewrite",
+    name: "fantomstudy/overrides",
     rules: {
       "antfu/top-level-function": "off",
       "no-console": "off",
@@ -17,35 +17,7 @@ const eslintConfig = antfu(
       "react/no-array-index-key": "off",
       "react-hooks/exhaustive-deps": "off",
       "react-refresh/only-export-components": "off",
-    },
-  },
-  {
-    name: "fantomstudy/perfectionist",
-    rules: {
-      "perfectionist/sort-imports": [
-        "error",
-        {
-          groups: [
-            "type-import",
-            ["type-parent", "type-sibling", "type-index", "type-internal"],
-            "value-builtin",
-            "value-external",
-            "value-internal",
-            ["value-parent", "value-sibling", "value-index"],
-            "side-effect",
-            "style",
-            "side-effect-style",
-            "ts-equals-import",
-            "unknown",
-          ],
-          internalPattern: ["^~/.*", "^@/.*"],
-          newlinesBetween: "ignore",
-          order: "asc",
-          type: "natural",
-        },
-      ],
+      "eslint-comments/no-unlimited-disable": "off",
     },
   },
 );
-
-export default eslintConfig;
