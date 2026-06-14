@@ -1,12 +1,10 @@
-@media (max-width: 1024px) {
-  .news {
-    width: 240px;
-    height: auto;
-  }
+.title {
+  margin-bottom: 36px;
 }
 
 @media (max-width: 768px) {
-  .news {
-    width: 200px;
+  .title {
+    scale: 0.8;
+    margin-left: -4%;
   }
 }

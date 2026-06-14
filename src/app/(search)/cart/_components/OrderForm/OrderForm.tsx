@@ -1,12 +1,13 @@
-import { Card } from "@/components/ui/Card";
-import { DeliverySection } from "./DeliverySection/DeliverySection";
-import { OrderSummary } from "./OrderSummary/OrderSummary";
+import { Card } from "@/components/ui";
+import { DeliverySection } from "./DeliverySection";
+import { OrderSummary } from "./OrderSummary";
 import { UserSection } from "./UserSection";
+import styles from "./OrderForm.module.css";
 
 export const OrderForm = () => {
   return (
     <Card>
-      <form className="stack-xl">
+      <form className={styles.form}>
         <UserSection />
         <DeliverySection />
         <OrderSummary />

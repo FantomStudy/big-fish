@@ -6,21 +6,21 @@ export interface Post {
   date: string;
 }
 
-const POSTS = [
+const POSTS: Post[] = [
   {
     id: 1,
-    imageUrl: "/mock/news-poster.png",
+    imageUrl: "/mock/track.png",
     date: "22.03.2026",
   },
   {
     id: 2,
-    imageUrl: "/mock/news-small.png",
+    imageUrl: "/mock/news/news-2.png",
     title: "Новый маркетплейс для рыболовов: все для рыбалки в одном месте!",
     date: "22.03.2026",
   },
   {
     id: 3,
-    imageUrl: "/mock/news-default.png",
+    imageUrl: "/mock/news/news-1.png",
     title: "Новый маркетплейс для рыболовов: все для рыбалки в одном месте!",
     description:
       "В мире рыбалки появился новый онлайн-маркетплейс, который обещает стать настоящей находкой для любителей активного отдыха на воде. Теперь все необходимые товары для рыбалки — от удочек и катушек до приманок и аксессуаров — можно приобрести в одном месте, не тратя время на поиски в разных магазинах.",
@@ -28,18 +28,18 @@ const POSTS = [
   },
   {
     id: 4,
-    imageUrl: "/mock/news-poster.png",
+    imageUrl: "/mock/track.png",
     date: "22.03.2026",
   },
   {
     id: 5,
-    imageUrl: "/mock/news-small.png",
+    imageUrl: "/mock/news/news-2.png",
     title: "Новый маркетплейс для рыболовов: все для рыбалки в одном месте!",
     date: "22.03.2026",
   },
   {
     id: 6,
-    imageUrl: "/mock/news-default.png",
+    imageUrl: "/mock/news/news-1.png",
     title: "Новый маркетплейс для рыболовов: все для рыбалки в одном месте!",
     description:
       "В мире рыбалки появился новый онлайн-маркетплейс, который обещает стать настоящей находкой для любителей активного отдыха на воде. Теперь все необходимые товары для рыбалки — от удочек и катушек до приманок и аксессуаров — можно приобрести в одном месте, не тратя время на поиски в разных магазинах.",
@@ -47,6 +47,6 @@ const POSTS = [
   },
 ];
 
-export const getPosts = (amount: number = 6) => {
+export const getNews = (amount: number = 6) => {
   return POSTS.slice(0, amount);
 };

@@ -11,10 +11,10 @@
   width: 16px;
   height: 16px;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--input);
-  border-radius: 9999px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
   outline: none;
-  color: var(--primary-foreground);
+  color: white;
 
   &::after {
     content: "";
@@ -39,13 +39,13 @@
   }
 
   &[data-checked] {
-    border-color: var(--primary);
-    background-color: var(--primary);
-    color: var(--primary-foreground);
+    border-color: var(--brand);
+    background-color: var(--brand);
+    color: white;
   }
 
   &[aria-invalid="true"][aria-checked="true"] {
-    border-color: var(--primary);
+    border-color: var(--brand);
   }
 }
 
@@ -63,7 +63,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  border-radius: 9999px;
-  background-color: var(--primary-foreground);
+  border-radius: var(--radius-full);
+  background-color: white;
   transform: translate(-50%, -50%);
 }

@@ -1,12 +1,8 @@
 import type { Product } from "@/mock/products";
 import { TrashIcon } from "lucide-react";
 import Image from "next/image";
-import { LikeButton } from "@/components/product/LikeButton";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { Checkbox } from "@/components/ui/Checkbox";
-import { NumberInput } from "@/components/ui/NumberInput";
-import { Typography } from "@/components/ui/Typography";
+import { LikeButton } from "@/components/LikeButton";
+import { Button, Card, Checkbox, NumberInput, Typography } from "@/components/ui";
 import { toCurrency } from "@/lib/format";
 import styles from "./CardItem.module.css";
 
@@ -39,7 +35,7 @@ export const CartItem = ({ product }: CartItemProps) => {
         </div>
 
         <div className={styles.amount}>
-          <Typography variant="title-sm" className={styles.price}>
+          <Typography variant="text-sm" className={styles.price}>
             {toCurrency(product.price)}
           </Typography>
           <NumberInput />

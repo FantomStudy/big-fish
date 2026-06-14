@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deliveryToggle {
+  width: 100%;
+
+  & > * {
+    height: 64px;
+    flex: 1;
+  }
+
+  & img {
+    padding: 8px;
+  }
+
+  .ozon {
+    padding: 12px;
+  }
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: var(--muted);
+  border-radius: 8px;
+}

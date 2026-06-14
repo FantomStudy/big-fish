@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SOCIAL_LINKS } from "@/lib/config/social";
+import { SOCIAL_LINKS } from "@/constants/social";
 import { NAV_LINKS, QUICK_LINKS } from "./constants";
 import styles from "./Header.module.css";
+import { AuthModal } from "@/components/AuthModal";
 
 export const Header = () => {
   return (
@@ -51,6 +52,8 @@ export const Header = () => {
                 );
               })}
             </div>
+
+            <AuthModal><button>Войти</button></AuthModal>
           </div>
         </div>
       </div>

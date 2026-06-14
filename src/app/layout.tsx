@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
+import { Footer, Header } from "@/components/layout";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,12 +12,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BIG FISH",
   description: "Лови больше с уникальными приманками",
-  openGraph: {
-    type: "website",
-    url: "https://bigfish.ru",
-    title: "BIG FISH",
-    description: "Лови больше с уникальными приманками",
-  },
 };
 
 const RootLayout = ({ children }: LayoutProps<"/">) => {

@@ -1,10 +1,10 @@
 "use client";
 
-import type { ToggleProps, ToggleSize } from "@/components/ui/Toggle";
+import type { ToggleProps, ToggleSize } from "@/components/ui";
 import { ToggleGroup as ToggleGroupBase } from "@base-ui/react/toggle-group";
 import clsx from "clsx";
 import { createContext, use } from "react";
-import { Toggle } from "@/components/ui/Toggle";
+import { Toggle } from "@/components/ui";
 import styles from "./ToggleGroup.module.css";
 
 interface ToggleGroupContextValue {

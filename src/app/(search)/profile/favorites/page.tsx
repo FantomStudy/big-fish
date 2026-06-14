@@ -1,21 +1,22 @@
-import { ProductCard } from "@/components/product/ProductCard";
-import { ProductGrid } from "@/components/product/ProductGrid";
-import { Typography } from "@/components/ui/Typography";
+import { ProductCard } from "@/components/ProductCard";
+import { ProductsGrid } from "@/components/ProductsGrid";
+import { Typography } from "@/components/ui";
 import { getProducts } from "@/mock/products";
+import styles from "./page.module.css";
 
 const FavoritesPage = () => {
   const products = getProducts();
   return (
-    <main className="stack">
-      <Typography variant="title" tag="h1">
+    <main>
+      <Typography variant="text-2xl" tag="h1" className={styles.title}>
         Избранное <sup>{products.length}</sup>
       </Typography>
 
-      <ProductGrid>
+      <ProductsGrid>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </ProductGrid>
+      </ProductsGrid>
     </main>
   );
 };

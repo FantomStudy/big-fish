@@ -23,12 +23,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 36px;
 }
 
 .progressStages {
   flex: 1 0 auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .step {
@@ -67,7 +68,7 @@
 }
 
 .connectorDot[data-completed="true"] {
-  background-color: var(--primary);
+  background-color: var(--brand);
 }
 
 .step[data-completed="false"] {

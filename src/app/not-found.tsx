@@ -1,14 +1,18 @@
-import { Typography } from "@/components/ui/Typography";
+import { Typography } from "@/components/ui";
 import styles from "./not-found.module.css";
 
 const NotFoundPage = () => {
   return (
     <main className={styles.wrapper}>
-      <img src="/not-found/code.svg" alt="404" className={styles.number} />
+      <img src="/illustrations/not-found-page-code.svg" alt="404" className={styles.number} />
 
-      <Typography variant="title-sm"> Упс... Похоже не клюёт...</Typography>
+      <Typography variant="text-xl">Упс... Похоже не клюёт...</Typography>
 
-      <img src="/not-found/illustration.svg" alt="illustration" className={styles.illustration} />
+      <img
+        src="/illustrations/not-found-page.svg"
+        alt="illustration"
+        className={styles.illustration}
+      />
     </main>
   );
 };

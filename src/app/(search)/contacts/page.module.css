@@ -13,6 +13,18 @@
   border-radius: 14px;
 }
 
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .link {
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Typography } from "@/components/ui/Typography";
+import { Typography } from "@/components/ui";
 import { ProgressBar } from "../_components/ProgressBar";
 import { ACHIEVEMENTS } from "./constants";
 import styles from "./page.module.css";
@@ -8,16 +8,16 @@ const AchievementsPage = () => {
   const recieved = ACHIEVEMENTS.filter((ach) => ach.progress === ach.total);
 
   return (
-    <main className="stack-xl">
-      <div className="stack">
-        <Typography variant="title-md" tag="h2">
+    <main className={styles.page}>
+      <div className={styles.section}>
+        <Typography variant="text-2xl" tag="h2">
           Прогресс
         </Typography>
         <ProgressBar />
       </div>
 
-      <div className="stack">
-        <Typography variant="title-md" tag="h1">
+      <div className={styles.section}>
+        <Typography variant="text-2xl" tag="h1">
           Достижения{" "}
           <sup>
             {recieved.length} из {ACHIEVEMENTS.length}

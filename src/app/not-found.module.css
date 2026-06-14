@@ -12,8 +12,18 @@
 }
 
 .number {
-  width: 200px;
+  width: 250px;
 }
 .illustration {
   width: 400px;
+}
+
+@media (max-width: 425px) {
+  .illustration {
+    width: 100%;
+    height: auto;
+  }
+  .number {
+    width: 200px;
+  }
 }

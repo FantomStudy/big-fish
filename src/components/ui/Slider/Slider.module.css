@@ -48,7 +48,7 @@
 }
 
 .indicator {
-  background-color: var(--primary);
+  background-color: var(--brand);
   user-select: none;
 
   &[data-orientation="horizontal"] {
@@ -67,7 +67,7 @@
   width: 12px;
   height: 12px;
   border: 1px solid var(--ring);
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
   background-color: var(--surface);
   transition-property: color, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

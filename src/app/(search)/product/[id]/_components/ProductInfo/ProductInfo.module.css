@@ -1,0 +1,178 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--muted);
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+
+  &[data-filled="true"] {
+    color: var(--brand-secondary);
+  }
+}
+
+.ratingValue {
+  font-weight: 600;
+}
+
+.reviewsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionLabel {
+  color: var(--muted-foreground);
+}
+
+.sizes {
+  flex-wrap: wrap;
+}
+
+.size {
+  min-width: 56px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 360px;
+}
+
+.color {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.expand {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.heading {
+  font-weight: 700;
+}
+
+.characteristicsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.descriptionIcon {
+  transform: rotate(-90deg);
+}
+
+.characteristics {
+  display: flex;
+  flex-direction: column;
+}
+
+.characteristic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.characteristicLabel {
+  color: var(--muted-foreground);
+}
+
+.characteristicValue {
+  text-align: right;
+  font-weight: 500;
+}
+
+.photosCount {
+  font-size: var(--text-sm);
+  color: var(--muted-foreground);
+  vertical-align: super;
+}
+
+.photos {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.photo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .colors {
+    max-width: none;
+  }
+}

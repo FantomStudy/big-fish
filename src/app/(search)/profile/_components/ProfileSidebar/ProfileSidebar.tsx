@@ -4,10 +4,7 @@ import type { User } from "@/mock/user";
 import { GiftIcon, LinkIcon, WalletIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Avatar } from "@/components/ui/Avatar";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { Typography } from "@/components/ui/Typography";
+import { Typography, Button, Avatar, Card } from "@/components/ui";
 import { LINKS } from "./constants";
 import styles from "./ProfileSidebar.module.css";
 
@@ -23,7 +20,7 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
   };
 
   return (
-    <Card className="stack">
+    <Card className={styles.card}>
       <header className={styles.header}>
         <Avatar src={user.avatarUrl} fallback={user.avatarUrl} />
 
@@ -53,7 +50,7 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
         <div className={styles.copyDescript}>+50 БигФишек за приглашение друга</div>
       </Button>
 
-      <nav className="stack-sm">
+      <nav className={styles.nav}>
         {LINKS.map((link) => (
           <Link
             key={link.href}

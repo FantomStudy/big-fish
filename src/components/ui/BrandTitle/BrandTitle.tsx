@@ -1,44 +1,62 @@
 import Image from "next/image";
 import styles from "./BrandTitle.module.css";
 
-const News = () => {
+export const News = () => {
   return (
     <Image
-      className={styles.news}
-      width={273}
-      height={105}
-      src="/news/news-text.svg"
+      className={styles.title}
+      width={274}
+      height={106}
+      src="/brand-titles/news.svg"
       alt="Новости"
     />
   );
 };
 
-const OurMerch = () => {
+export const Collections = () => {
   return (
     <Image
-      className={styles.news}
+      className={styles.title}
+      width={299}
+      height={92}
+      src="/brand-titles/collections.svg"
+      alt="Подборки"
+    />
+  );
+};
+
+export const Reviews = () => {
+  return (
+    <Image
+      className={styles.title}
+      width={239}
+      height={75}
+      src="/brand-titles/reviews.svg"
+      alt="Отзывы"
+    />
+  );
+};
+
+export const Merch = () => {
+  return (
+    <Image
+      className={styles.title}
       width={345}
       height={75}
-      src="/rock-group/our-merch.svg"
+      src="/brand-titles/merch.svg"
       alt="Наш мерч"
     />
   );
 };
 
-const OurTracks = () => {
+export const Tracks = () => {
   return (
     <Image
-      className={styles.news}
+      className={styles.title}
       width={311}
-      height={123}
-      src="/rock-group/our-tracks.svg"
+      height={124}
+      src="/brand-titles/tracks.svg"
       alt="Наши треки"
     />
   );
-};
-
-export const BrandTitle = {
-  News,
-  OurMerch,
-  OurTracks,
 };

@@ -1,18 +1,22 @@
 "use client";
 
-import { Checkbox } from "@/components/ui/Checkbox";
-import { Field, FieldLabel } from "@/components/ui/Field";
-import { Input } from "@/components/ui/Input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/Radio";
-import { Slider } from "@/components/ui/Slider";
-import { Typography } from "@/components/ui/Typography";
+import {
+  Typography,
+  Input,
+  Checkbox,
+  RadioGroup,
+  RadioGroupItem,
+  Slider,
+  Field,
+  FieldLabel,
+} from "@/components/ui";
 import { CATEGORIES, COLORS, USAGE_TYPE } from "./constants";
 import styles from "./Filters.module.css";
 
 export const Filters = () => {
   return (
-    <div className="stack-xl">
-      <div className="stack">
+    <div className={styles.filters}>
+      <div className={styles.section}>
         <Typography>Категория</Typography>
         <RadioGroup>
           {CATEGORIES.map((category) => (
@@ -26,7 +30,7 @@ export const Filters = () => {
         </RadioGroup>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Цена</Typography>
         <div className={styles.inputs}>
           <Field>
@@ -40,7 +44,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Тип применения</Typography>
         <RadioGroup>
           {USAGE_TYPE.map((type) => (
@@ -54,7 +58,7 @@ export const Filters = () => {
         </RadioGroup>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Длина, мм</Typography>
         <Slider min={1} max={200} defaultValue={[1, 200]} />
         <div className={styles.inputs}>
@@ -69,7 +73,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Цвет</Typography>
         <div className={styles.colors}>
           {COLORS.map((color) => (
@@ -83,7 +87,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Количество в упаковке, шт</Typography>
         <Slider min={1} max={4} defaultValue={[1, 4]} />
         <div className={styles.inputs}>
@@ -98,7 +102,7 @@ export const Filters = () => {
         </div>
       </div>
 
-      <div className="stack">
+      <div className={styles.section}>
         <Typography>Вес, г</Typography>
         <Slider min={1} max={40} defaultValue={[1, 40]} />
 

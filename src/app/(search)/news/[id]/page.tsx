@@ -1,32 +1,28 @@
 import Image from "next/image";
-import { BrandTitle } from "@/components/ui/BrandTitle";
-import { Card } from "@/components/ui/Card";
-import { Typography } from "@/components/ui/Typography";
+import { Typography, BrandTitle, Card } from "@/components/ui";
+import styles from "./page.module.css";
 
 const PostPage = () => {
   return (
-    <main className="stack">
+    <main className="container">
       <BrandTitle.News />
 
-      <Card className="stack">
-        <div className="stack-sm">
-          <Typography variant="title" tag="h1">
+      <Card className={styles.card}>
+        <div className={styles.header}>
+          <Typography variant="text-3xl" tag="h1" className={styles.title}>
             Новый маркетплейс для рыболовов: все для рыбалки в одном месте!
           </Typography>
-          <Typography variant="title-sm" className="text-muted">
+          <Typography variant="text-lg" className={styles.date}>
             01.04.2026
           </Typography>
         </div>
 
         <Image
           alt="news-large"
-          src="/mock/news-large.png"
+          src="/mock/news/news-2.png"
           width={1600}
           height={900}
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
+          className={styles.image}
         />
 
         <Typography>

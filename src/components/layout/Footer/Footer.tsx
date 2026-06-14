@@ -1,7 +1,8 @@
 import { PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { SOCIAL_LINKS } from "@/lib/config/social";
+import { Typography } from "@/components/ui";
+import { SOCIAL_LINKS } from "@/constants/social";
 import { BLOCKS } from "./constants";
 import styles from "./Footer.module.css";
 
@@ -16,7 +17,7 @@ export const Footer = () => {
 
           {BLOCKS.map((block) => (
             <div key={block.name} className={styles.block}>
-              <h2 className={styles.blockTitle}>{block.name}</h2>
+              <Typography className={styles.blockTitle}>{block.name}</Typography>
               {block.links.map((link) => (
                 <Link key={link.label} href={link.href} className={styles.blockLink}>
                   {link.label}
@@ -26,7 +27,7 @@ export const Footer = () => {
           ))}
 
           <div className={styles.block}>
-            <h2 className={styles.blockTitle}>Мы в сети</h2>
+            <Typography className={styles.blockTitle}>Мы в сети</Typography>
             {SOCIAL_LINKS.map((item) => {
               const Icon = item.icon;
               return (

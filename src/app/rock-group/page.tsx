@@ -1,34 +1,38 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { PostCard } from "@/components/post/PostCard";
-import { PostGrid } from "@/components/post/PostGrid";
-import { SearchBar } from "@/components/product/SearchBar";
-import { Slider } from "@/components/Slider";
-import { BrandTitle } from "@/components/ui/BrandTitle";
-import { getPosts } from "@/mock/posts";
+import { NewsSection } from "@/components/NewsSection";
+import { SearchBar } from "@/components/SearchBar";
+import { Typography, BrandTitle, Carousel } from "@/components/ui";
 import styles from "./page.module.css";
+
+const SLIDES = [
+  {
+    alt: "Что то ",
+    src: "/mock/slider/rock-group.png",
+  },
+];
 
 const MERCH_CARDS = [
   {
-    image: { url: "/merch/all-stages.png", width: 442, height: 329 },
+    image: { url: "/mock/merch/all-stages.png" },
     title: "Вне сцены",
     content: `Экипировка для тех, кто живет на частоте BIG FISH 24/7. От непробиваемых худи до
     винила с гипнотическим басом.`,
   },
   {
-    image: { url: "/merch/small-monsters.png", width: 450, height: 320 },
+    image: { url: "/mock/merch/small-monsters.png" },
     title: "Маленькие монстры",
     content: `У каждого мелкого хищника — свой характер и боевой задор. Собери свою банду с малых 
     лет и готовься к большим уловам в будущем. `,
   },
   {
-    image: { url: "/merch/badges.png", width: 443, height: 328 },
+    image: { url: "/mock/merch/badges.png" },
     title: "Значки и нашивки",
     content: `Твои боевые награды за верность звуку и драйву. Металлические пины и неубиваемые 
     патчи, которые превратят любую куртку в косуху рок-звезды.`,
   },
   {
-    image: { url: "/merch/scene-masters.png", width: 450, height: 268 },
+    image: { url: "/mock/merch/scene-masters.png" },
     title: "Мастера сцены",
     content: `Полная анатомия «фишпланетян» с продвинутыми шарнирами. Живая мимика, сменные девайсы 
     и возможность зафиксировать любой безумный прыжок. `,
@@ -36,59 +40,59 @@ const MERCH_CARDS = [
 ] as const;
 
 const RockGroupPage = () => {
-  const posts = getPosts(3);
-
   return (
-    <div className={styles.content}>
-      <Slider />
-      <div className={clsx("container stack", styles.newsSection)}>
+    <div className={styles.page}>
+      <Carousel slides={SLIDES} />
+
+      <div className="container">
         <SearchBar />
-        <BrandTitle.News />
-        <PostGrid>
-          {posts.map((post) => (
-            <PostCard key={post.id} post={post} />
-          ))}
-        </PostGrid>
       </div>
-      <div className={styles.souvenirs}>
-        <div className={clsx("container stack", styles.souvenirsContainer)}>
-          <BrandTitle.OurMerch />
-          <div className={styles.ourMerch}>
-            {MERCH_CARDS.map((el, i) => (
-              <article key={i} className={styles.ourMerchCard}>
-                <Image
-                  alt={el.title}
-                  src={el.image.url}
-                  width={el.image.width}
-                  height={el.image.height}
-                />
-                <div className={styles.ourMerchCardContent}>
-                  <h2>{el.title}</h2>
-                  <p>{el.content}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <BrandTitle.OurTracks />
-          <div className={styles.tracks}>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Image key={i} alt="Трек" src="/merch/track.png" width={385} height={385} />
-            ))}
+
+      <div className={styles.content}>
+        <div className="container">
+          <NewsSection amount={3} />
+        </div>
+
+        <div className={styles.accented}>
+          <div className={clsx("container", styles.accentedWrapper)}>
+            <div className={styles.section}>
+              <BrandTitle.Merch />
+              <div className={styles.merchGrid}>
+                {MERCH_CARDS.map((card, i) => (
+                  <article key={i} className={styles.merchCard}>
+                    <Image alt={card.title} src={card.image.url} width={450} height={300} />
+                    <Typography variant="text-xl">{card.title}</Typography>
+                    <Typography className={styles.merchContent}>{card.content}</Typography>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.section}>
+              <BrandTitle.Tracks />
+              <div className={styles.tracks}>
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <Image key={i} alt="Трек" src="/mock/track.png" width={385} height={385} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={clsx("container stack")}>
-        <div className={styles.backStageSection}>
-          <Image src="/rock-group/backstage.png" alt="backstage" height={580} width={570} />
-          <div className={styles.backStageText}>
-            <h1>BACKSTAGE: ЖИЗНЬ НА КРЮЧКЕ</h1>
-            <p>
-              Каждый клип — это легенда, ожившая в мутной воде. Здесь мы показываем боевой стиль
-              каждого участника банды BIG FISH в деле. Хочешь увидеть, как наш фронтмен выдает
-              зубодробительную игру хвостом? Или как басист пробивает самое дно своим весом? Заходи
-              за кулисы, изучай коронные приемы хищников с другой планеты и выбирай, чей ритм
-              сегодня станет твоим.
-            </p>
+
+        <div className="container">
+          <div className={styles.backstageSection}>
+            <Image src="/rock-group/backstage.png" alt="backstage" height={580} width={570} />
+
+            <div className={styles.backstageText}>
+              <Typography variant="text-2xl">BACKSTAGE: ЖИЗНЬ НА КРЮЧКЕ</Typography>
+              <Typography>
+                Каждый клип — это легенда, ожившая в мутной воде. Здесь мы показываем боевой стиль
+                каждого участника банды BIG FISH в деле. Хочешь увидеть, как наш фронтмен выдает
+                зубодробительную игру хвостом? Или как басист пробивает самое дно своим весом?
+                Заходи за кулисы, изучай коронные приемы хищников с другой планеты и выбирай, чей
+                ритм сегодня станет твоим.
+              </Typography>
+            </div>
           </div>
         </div>
       </div>

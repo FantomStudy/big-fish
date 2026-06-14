@@ -6,7 +6,7 @@ export interface Product {
   color: string;
 }
 
-const MOCK_PRODUCTS = Array.from({ length: 100 }).map((_, index) => ({
+export const MOCK_PRODUCTS = Array.from({ length: 100 }).map((_, index) => ({
   id: index + 1,
   name: "Мягкие силиконовые приманки для рыбалки твистер 100мм на щуку судака и окуня",
   price: 411,

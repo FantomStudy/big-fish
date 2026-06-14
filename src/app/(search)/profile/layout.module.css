@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 16px;
+  align-items: start;
 }
 
 .content {
@@ -13,5 +14,6 @@
     display: flex;
     flex-direction: column;
     grid-template-columns: auto;
+    align-items: normal;
   }
 }

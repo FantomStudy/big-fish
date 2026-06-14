@@ -1,3 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -18,9 +30,9 @@
 
 .balance {
   background-color: var(--surface);
-  color: var(--primary);
+  color: var(--brand);
   padding: 4px 8px;
-  border: 1px solid var(--input);
+  border: 1px solid var(--border);
   border-radius: 8px;
   position: relative;
   z-index: 1;
@@ -28,7 +40,7 @@
 
 .bonus {
   background-color: var(--accent);
-  color: var(--secondary);
+  color: var(--brand-secondary);
   padding: 4px 8px;
   padding-top: 10px;
   border-radius: 0 0 6px 6px;
@@ -45,7 +57,7 @@
 }
 
 .editProfile {
-  color: var(--primary);
+  color: var(--brand);
   font-size: 14px;
   font-weight: 500;
 }
@@ -87,6 +99,6 @@
 }
 
 .link[data-active="true"] {
-  color: var(--primary);
+  color: var(--brand);
   font-weight: 500;
 }

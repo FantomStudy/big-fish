@@ -1,7 +1,7 @@
 import { GiftIcon } from "lucide-react";
 import Image from "next/image";
 import { Fragment } from "react/jsx-runtime";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui";
 import { STEPS } from "./constants";
 import styles from "./ProgressBar.module.css";
 

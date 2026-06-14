@@ -6,9 +6,11 @@ const ProfileLayout = ({ children }: LayoutProps<"/profile">) => {
   const user = getUser();
 
   return (
-    <div className={styles.layout}>
-      <ProfileSidebar user={user} />
-      <div className={styles.content}>{children}</div>
+    <div className="container">
+      <div className={styles.layout}>
+        <ProfileSidebar user={user} />
+        <div className={styles.content}>{children}</div>
+      </div>
     </div>
   );
 };
