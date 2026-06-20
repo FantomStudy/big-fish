@@ -9,3 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## File search
 
 For any file search or grep in the current git-indexed directory, use fff tools.
+
+## Design system
+
+Always use ui-kit and dewsign tokens.
