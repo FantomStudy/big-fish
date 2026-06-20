@@ -1,12 +1,12 @@
 "use client";
 
+import type { ProductCharacteristic, ProductColor } from "@/constants/mock/productDetail";
 import clsx from "clsx";
 import { ChevronDown, ChevronUp, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Button, Typography, ToggleGroup, ToggleGroupItem } from "@/components/ui";
-import type { ProductCharacteristic, ProductColor } from "@/constants/mock/productDetail";
+import { Button, Typography, ToggleGroup, ToggleGroupItem, ScrollCarousel } from "@/components/ui";
 import styles from "./ProductInfo.module.css";
 
 interface ProductInfoProps extends React.ComponentProps<"div"> {
@@ -128,13 +128,13 @@ export const ProductInfo = ({
           <span className={styles.photosCount}>{customerPhotosCount.toLocaleString("ru-RU")}</span>
         </Typography>
 
-        <div className={styles.photos}>
+        <ScrollCarousel>
           {customerPhotos.map((src, i) => (
             <div key={`${src}-${i}`} className={styles.photo}>
               <Image src={src} alt={`Фото покупателя ${i + 1}`} fill sizes="120px" />
             </div>
           ))}
-        </div>
+        </ScrollCarousel>
       </section>
     </div>
   );

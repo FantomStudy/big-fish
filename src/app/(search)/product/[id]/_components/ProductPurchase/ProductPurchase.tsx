@@ -39,7 +39,7 @@ export const ProductPurchase = ({
       <div className={styles.quantityRow}>
         <span className={styles.quantityLabel}>Количество:</span>
         <NumberInput
-          min={1}
+          min={0}
           max={99}
           value={quantity}
           onValueChange={(value) => setQuantity(value ?? 1)}

@@ -1,6 +1,7 @@
 import { ProductCard } from "@/components/ProductCard";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ScrollCarousel, Typography } from "@/components/ui";
+import { getProducts } from "@/constants/mock/product";
 import {
   PRODUCT_COLORS,
   PRODUCT_CUSTOMER_PHOTOS,
@@ -11,7 +12,6 @@ import {
   PRODUCT_REVIEW_STATS,
   PRODUCT_SHORT_CHARACTERISTICS,
 } from "@/constants/mock/productDetail";
-import { getProducts } from "@/constants/mock/product";
 import { ProductDescription } from "./_components/ProductDescription";
 import { ProductGallery } from "./_components/ProductGallery";
 import { ProductInfo } from "./_components/ProductInfo";

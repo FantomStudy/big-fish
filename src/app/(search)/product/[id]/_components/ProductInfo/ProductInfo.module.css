@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 0;
 }
 
 .title {
@@ -12,7 +13,8 @@
 .rating {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
 }
 
 .stars {
@@ -51,6 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-width: 0;
 }
 
 .sectionLabel {
@@ -62,11 +65,7 @@
 }
 
 .size {
-  min-width: 56px;
-  height: 44px;
-  padding: 0 16px;
   border-radius: var(--radius-lg);
-  font-weight: 500;
 
   &[data-pressed] {
     background-color: var(--brand);
@@ -77,21 +76,23 @@
 
 .colors {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 48px);
   gap: 8px;
   max-width: 360px;
 }
 
 .color {
   position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 48px;
+  height: 48px;
   padding: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
 
   img {
     object-fit: cover;
+    aspect-ratio: 1 / 1;
+
   }
 
   &[data-pressed] {
@@ -124,8 +125,9 @@
 .characteristicsHeader {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px 16px;
 }
 
 .descriptionIcon {
@@ -178,6 +180,8 @@
     object-fit: cover;
   }
 }
+
+
 
 @media (max-width: 500px) {
   .colors {

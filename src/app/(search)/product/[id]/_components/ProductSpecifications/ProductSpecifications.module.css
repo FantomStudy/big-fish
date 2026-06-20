@@ -46,26 +46,8 @@
 
 @media (max-width: 900px) {
   .grid {
-    gap: 12px 32px;
+    grid-template-columns: 1fr;
+    gap: 12px ;
   }
 }
 
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .row {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-
-  .dots {
-    display: none;
-  }
-
-  .value {
-    text-align: left;
-  }
-}

@@ -1,11 +1,11 @@
 "use client";
 
+import type { ProductReview, ProductReviewStats } from "@/constants/mock/productDetail";
 import clsx from "clsx";
 import { ChartNoAxesColumnIncreasing, Star, UserIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { Typography } from "@/components/ui";
-import type { ProductReview, ProductReviewStats } from "@/constants/mock/productDetail";
+import { ScrollCarousel, Typography } from "@/components/ui";
 import styles from "./ProductReviews.module.css";
 
 interface ProductReviewsProps {
@@ -76,13 +76,13 @@ const ProductReviewItem = ({ review }: { review: ProductReview }) => {
       </Typography>
 
       {review.photos.length > 0 && (
-        <div className={styles.reviewPhotos}>
+        <ScrollCarousel>
           {review.photos.map((photo, index) => (
             <div key={`${review.id}-${index}`} className={styles.reviewPhoto}>
               <Image src={photo} alt={`Фото к отзыву ${index + 1}`} fill sizes="140px" />
             </div>
           ))}
-        </div>
+        </ScrollCarousel>
       )}
     </article>
   );
@@ -100,19 +100,22 @@ export const ProductReviews = ({ reviews, stats, customerPhotos }: ProductReview
             <span className={styles.count}>{stats.total.toLocaleString("ru-RU")}</span>
           </Typography>
 
-          <div className={styles.gallery}>
+          <ScrollCarousel>
             {customerPhotos.map((photo, index) => (
               <div key={`${photo}-${index}`} className={styles.galleryPhoto}>
                 <Image src={photo} alt={`Фото покупателя ${index + 1}`} fill sizes="72px" />
               </div>
             ))}
-          </div>
+          </ScrollCarousel>
         </div>
 
         <aside className={styles.summary}>
           <div className={styles.score}>
             <span className={styles.scoreValue}>
-              {stats.average.toLocaleString("ru-RU", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+              {stats.average.toLocaleString("ru-RU", {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1,
+              })}
             </span>
             <span className={styles.scoreMax}>/5</span>
           </div>

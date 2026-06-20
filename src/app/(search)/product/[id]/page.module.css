@@ -7,14 +7,9 @@
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(280px, 380px) minmax(0, 1fr) 300px;
+  grid-template-columns:  480px minmax(0, 1fr) 360px;
+  gap: 20px 24px;
   align-items: start;
-  gap: 24px 32px;
-}
-
-.gallery {
-  position: sticky;
-  top: 16px;
 }
 
 .purchase {
@@ -37,9 +32,9 @@
   min-width: 240px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .layout {
-    grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+    grid-template-columns: minmax(260px, 440px) minmax(0, 1fr);
   }
 
   .purchase {
@@ -55,10 +50,11 @@
   }
 
   .layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
   }
 
-  .gallery,
   .purchase {
     position: static;
   }
