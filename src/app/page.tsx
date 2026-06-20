@@ -91,7 +91,11 @@ const IndexPage = () => {
 
                   <ScrollCarousel>
                     {category.products.map((product) => (
-                      <ProductCard key={product.id} product={product} className={styles.productCard} />
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        className={styles.productCard}
+                      />
                     ))}
                   </ScrollCarousel>
                 </div>
@@ -99,7 +103,7 @@ const IndexPage = () => {
 
               <ScrollCarousel>
                 {recommendedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} className={styles.productCard} />
                 ))}
               </ScrollCarousel>
             </div>
