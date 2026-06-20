@@ -22,10 +22,10 @@ export const DeliverySection = () => {
           <FieldLabel>Выберите способ доставки</FieldLabel>
           <ToggleGroup className={styles.deliveryToggle}>
             <ToggleGroupItem>
-              <Image src="/icons/sdek-logo.svg" alt="SDEK" fill />
+              <Image src="/cart/sdek-logo.svg" alt="SDEK" fill />
             </ToggleGroupItem>
             <ToggleGroupItem>
-              <Image src="/icons/ozon-logo.svg" alt="OZON" fill className={styles.ozon} />
+              <Image src="/cart/ozon-logo.svg" alt="OZON" fill className={styles.ozon} />
             </ToggleGroupItem>
           </ToggleGroup>
         </Field>

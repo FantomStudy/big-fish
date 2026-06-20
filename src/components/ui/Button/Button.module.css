@@ -37,7 +37,7 @@
 
 /* Sizes */
 .md {
-  height: 42px;
+  height: 40px;
   padding: 16px 20px;
 
   &:has(> svg) {
@@ -54,7 +54,7 @@
 .sm {
   height: 32px;
   font-size: 14px;
-  padding: 16px 10px;
+  padding: 8px;
 
   &:has(> svg) {
     padding-left: 8px;
@@ -68,12 +68,12 @@
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
 
   & > svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -99,10 +99,19 @@
 
 .secondary {
   background-color: var(--brand-secondary);
-  color: var(--foreground);
+  color: black;
 
   &:hover {
     background-color: color-mix(in srgb, var(--brand-secondary), #000 10%);
+  }
+}
+
+.accent {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--accent), #fff 10%);
   }
 }
 
@@ -123,7 +132,7 @@
   border: 1px solid var(--border);
 
   &:hover {
-    background-color: var(--muted);
+    background-color: color-mix(in srgb, transparent, #000 5%);
   }
 }
 
@@ -143,6 +152,6 @@
   background: transparent;
 
   &:hover {
-    background-color: var(--muted);
+    background-color: color-mix(in srgb, transparent, #000 5%);
   }
 }

@@ -1,4 +1,4 @@
-import type { Product } from "@/mock/products";
+import type { Product } from "@/constants/mock/product";
 import { TrashIcon } from "lucide-react";
 import Image from "next/image";
 import { LikeButton } from "@/components/LikeButton";

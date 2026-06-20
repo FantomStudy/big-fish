@@ -1,20 +1,19 @@
 import { MenuIcon, SearchIcon } from "lucide-react";
+import { Button, Input } from "../ui";
 import styles from "./SearchBar.module.css";
 
 export const SearchBar = () => {
   return (
     <div className={styles.searchBar}>
-      <button className={styles.button}>
-        <MenuIcon className={styles.buttonIcon} />
-      </button>
-      <input
-        type="search"
-        placeholder="Найти что-то для рыбалки..."
-        className={styles.searchInput}
-      />
-      <button className={styles.button}>
-        <SearchIcon className={styles.buttonIcon} />
-      </button>
+      <Button variant="accent" size="icon">
+        <MenuIcon />
+      </Button>
+
+      <Input variant="dark" type="search" placeholder="Найти что-то для рыбалки..." />
+
+      <Button variant="accent" size="icon">
+        <SearchIcon />
+      </Button>
     </div>
   );
 };

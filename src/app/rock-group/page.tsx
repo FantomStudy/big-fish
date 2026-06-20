@@ -5,13 +5,6 @@ import { SearchBar } from "@/components/SearchBar";
 import { Typography, BrandTitle, Carousel } from "@/components/ui";
 import styles from "./page.module.css";
 
-const SLIDES = [
-  {
-    alt: "Что то ",
-    src: "/mock/slider/rock-group.png",
-  },
-];
-
 const MERCH_CARDS = [
   {
     image: { url: "/mock/merch/all-stages.png" },
@@ -40,9 +33,14 @@ const MERCH_CARDS = [
 ] as const;
 
 const RockGroupPage = () => {
+  const slides = [
+    { alt: "Рок-группа", src: "/mock/carousel/rock-group.png" },
+    { alt: "Главная", src: "/mock/carousel/index.png" },
+  ];
+
   return (
-    <div className={styles.page}>
-      <Carousel slides={SLIDES} />
+    <main>
+      <Carousel slides={slides} />
 
       <div className="container">
         <SearchBar />
@@ -53,8 +51,8 @@ const RockGroupPage = () => {
           <NewsSection amount={3} />
         </div>
 
-        <div className={styles.accented}>
-          <div className={clsx("container", styles.accentedWrapper)}>
+        <div className={styles.accent}>
+          <div className={clsx("container", styles.accentWrapper)}>
             <div className={styles.section}>
               <BrandTitle.Merch />
               <div className={styles.merchGrid}>
@@ -80,7 +78,7 @@ const RockGroupPage = () => {
         </div>
 
         <div className="container">
-          <div className={styles.backstageSection}>
+          <div className={styles.backstage}>
             <Image src="/rock-group/backstage.png" alt="backstage" height={580} width={570} />
 
             <div className={styles.backstageText}>
@@ -96,7 +94,7 @@ const RockGroupPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

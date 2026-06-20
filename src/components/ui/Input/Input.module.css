@@ -1,7 +1,7 @@
 .input {
   width: 100%;
   min-width: 0;
-  height: 32px;
+  height: 40px;
   padding: 4px 10px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -40,6 +40,15 @@
   &[aria-invalid="true"] {
     border-color: var(--danger);
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 20%, transparent);
+  }
+}
+
+.dark {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+
+  &::placeholder {
+    color: var(--accent-foreground-muted);
   }
 }
 

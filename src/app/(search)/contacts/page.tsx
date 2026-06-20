@@ -1,6 +1,6 @@
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
-import { SOCIAL_LINKS } from "@/constants/social";
+import { SOCIAL_LINKS } from "@/constants/socials";
 import styles from "./page.module.css";
 
 const ContactsPage = () => {

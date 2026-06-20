@@ -1,44 +1,25 @@
-.page {
-  margin-top: -16px;
-}
-
 .carousel {
-  height: 360px;
+  height: 362px;
 }
 
-.content {
+.wrapper {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 64px;
 }
 
-.reviews {
+/* Promo */
+.promo {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
 }
 
-.accent {
-  padding: 36px 0;
-  border-radius: var(--radius-2xl);
-  background-color: var(--accent);
-}
-
-.categories {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.categoryName {
-  object-fit: contain;
-}
-
-.discountGrid {
+.promoGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px 36px;
   margin-top: 36px;
+  max-width: calc(100% - (40px + 16px) * 2);
 
   & > * {
     background-color: #fff;
@@ -46,7 +27,7 @@
   }
 }
 
-.discountMain {
+.promoMain {
   grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -54,13 +35,13 @@
   overflow: hidden;
 }
 
-.discountMainImage {
+.promoMainImage {
   height: auto;
   width: 100%;
   object-fit: contain;
 }
 
-.discountSecondary {
+.benefit {
   height: 220px;
   padding: 24px 32px;
   display: flex;
@@ -71,52 +52,107 @@
   text-align: center;
 }
 
-.discountIcon {
-  width: 48px;
-  height: 48px;
+.benefitIcon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Accent */
+.accent {
+  background-color: var(--accent);
+  padding: 32px 0;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.categoryWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+.categoryProducts {
+  width: 100%;
+}
+
+.productCard {
+  flex: 0 0 240px;
+  min-width: 240px;
+
+  @media (max-width: 768px) {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+}
+
+/* Reviews */
+.reviewGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
 
 @media (max-width: 1024px) {
-  .discountName {
+  .benefitName {
     font-size: var(--text-xl);
   }
 
-  .discountDescription {
+  .benefitDescription {
     font-size: var(--text-base);
   }
 }
 
 @media (max-width: 768px) {
-  .discountGrid {
+  .promoGrid {
     grid-template-columns: 1fr;
     gap: 16px;
+    max-width: none;
   }
 
-  .discountMain {
+  .promoMain {
     grid-column: span 1;
     grid-template-columns: 1fr;
   }
 
-  .discountMainImage:last-child {
+  .promoMainImage:last-child {
     display: none;
   }
 
-  .discountSecondary {
+  .benefit {
     padding: 20px 16px;
   }
 
-  .discountIcon {
+  .benefitIcon {
     width: 40px;
     height: 40px;
+  }
+
+  .categoryName {
+    width: 360px;
+    height: auto;
+  }
+
+  .reviewGrid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 500px) {
-  .discountName {
+  .benefitName {
     font-size: var(--text-lg);
   }
 
-  .discountDescription {
+  .benefitDescription {
     font-size: var(--text-sm);
+  }
+
+  .categoryName {
+    width: 280px;
+    height: auto;
   }
 }

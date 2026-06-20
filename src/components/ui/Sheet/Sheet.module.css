@@ -1,0 +1,134 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #0000001a;
+  transition: opacity 150ms;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    opacity: 0;
+  }
+}
+
+.popup {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--surface);
+  color: var(--foreground);
+  background-clip: padding-box;
+  transition: all 200ms ease-in-out;
+
+  &[data-ending-style] {
+    opacity: 0;
+  }
+
+  &[data-starting-style] {
+    opacity: 0;
+  }
+
+  &[data-side="bottom"] {
+    inset-inline: 0;
+    bottom: 0;
+    height: auto;
+    border-top: 1px solid var(--border);
+
+    &[data-ending-style] {
+      transform: translateY(40px);
+    }
+
+    &[data-starting-style] {
+      transform: translateY(40px);
+    }
+  }
+
+  &[data-side="top"] {
+    inset-inline: 0;
+    top: 0;
+    height: auto;
+    border-bottom: 1px solid var(--border);
+
+    &[data-ending-style] {
+      transform: translateY(-40px);
+    }
+
+    &[data-starting-style] {
+      transform: translateY(-40px);
+    }
+  }
+
+  &[data-side="left"] {
+    inset-block: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    border-right: 1px solid var(--border);
+
+    &[data-ending-style] {
+      transform: translateX(-40px);
+    }
+
+    &[data-starting-style] {
+      transform: translateX(-40px);
+    }
+  }
+
+  &[data-side="right"] {
+    inset-block: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid var(--border);
+
+    &[data-ending-style] {
+      transform: translateX(40px);
+    }
+
+    &[data-starting-style] {
+      transform: translateX(40px);
+    }
+  }
+
+  @media (min-width: 426px) {
+    &:is([data-side="right"], [data-side="left"]) {
+      max-width: 384px;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.title {
+  font-weight: var(--font-weight-medium);
+  color: var(--foreground);
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+}
+
+.description {
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
+  color: var(--muted-foreground);
+}

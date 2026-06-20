@@ -1,6 +1,6 @@
 "use client";
 
-import type { Product } from "@/mock/products";
+import type { Product } from "@/constants/mock/product";
 import Image from "next/image";
 import { Typography } from "@/components/ui";
 import { useCartContext } from "../../_contexts/CartContext";
@@ -12,12 +12,7 @@ const EmptyScreen = () => {
   return (
     <div className={styles.empty}>
       <Typography variant="text-xl">Похоже в корзине пусто...</Typography>
-      <Image
-        src="/cart/illustration.svg"
-        width={359}
-        height={426}
-        alt="Похоже в корзине пусто..."
-      />
+      <Image src="/cart/empty.svg" width={359} height={426} alt="Похоже в корзине пусто..." />
     </div>
   );
 };

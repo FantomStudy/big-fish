@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./Button.module.css";
 
 interface ButtonProps extends ButtonBase.Props {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "link";
+  variant?: "primary" | "secondary" | "accent" | "danger" | "outline" | "ghost" | "link";
   size?: "sm" | "md" | "icon-sm" | "icon";
 }
 

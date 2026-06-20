@@ -15,7 +15,7 @@
   background-color: transparent;
 
   &:hover {
-    background-color: var(--muted);
+    background-color: color-mix(in srgb, transparent, black 5%);
   }
 
   & > svg {
@@ -24,7 +24,7 @@
   }
 
   &[data-pressed] {
-    background-color: var(--muted);
+    background-color: color-mix(in srgb, transparent, black 5%);
   }
 
   &:disabled {
@@ -44,7 +44,7 @@
 }
 
 .md {
-  height: 42px;
+  height: 40px;
   padding: 16px 20px;
 
   &:has(> svg) {
@@ -79,8 +79,8 @@
   height: 42px;
 
   & > svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 }
 

@@ -6,6 +6,7 @@ const SearchLayout = ({ children }: LayoutProps<"/">) => {
       <div className="container">
         <SearchBar />
       </div>
+
       {children}
     </>
   );

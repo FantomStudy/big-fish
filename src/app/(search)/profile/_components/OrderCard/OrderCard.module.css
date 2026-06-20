@@ -1,0 +1,26 @@
+.card {
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+
+  img {
+    border-radius: var(--radius-md);
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 4px;
+}
+
+.description {
+  color: var(--muted-foreground);
+}

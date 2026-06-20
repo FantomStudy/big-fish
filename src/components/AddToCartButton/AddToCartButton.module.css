@@ -1,0 +1,17 @@
+.button {
+  border-radius: var(--radius-xl);
+  background-color: color-mix(in srgb, var(--muted), transparent 10%);
+  backdrop-filter: blur(4px);
+  color: var(--foreground);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background-color: var(--brand);
+    color: white;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

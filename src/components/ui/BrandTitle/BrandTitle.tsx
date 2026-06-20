@@ -7,7 +7,7 @@ export const News = () => {
       className={styles.title}
       width={274}
       height={106}
-      src="/brand-titles/news.svg"
+      src="/common/brand-titles/news.svg"
       alt="Новости"
     />
   );
@@ -19,7 +19,7 @@ export const Collections = () => {
       className={styles.title}
       width={299}
       height={92}
-      src="/brand-titles/collections.svg"
+      src="/common/brand-titles/collections.svg"
       alt="Подборки"
     />
   );
@@ -31,7 +31,7 @@ export const Reviews = () => {
       className={styles.title}
       width={239}
       height={75}
-      src="/brand-titles/reviews.svg"
+      src="/common/brand-titles/reviews.svg"
       alt="Отзывы"
     />
   );
@@ -43,7 +43,7 @@ export const Merch = () => {
       className={styles.title}
       width={345}
       height={75}
-      src="/brand-titles/merch.svg"
+      src="/common/brand-titles/merch.svg"
       alt="Наш мерч"
     />
   );
@@ -55,7 +55,7 @@ export const Tracks = () => {
       className={styles.title}
       width={311}
       height={124}
-      src="/brand-titles/tracks.svg"
+      src="/common/brand-titles/tracks.svg"
       alt="Наши треки"
     />
   );

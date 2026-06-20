@@ -1,27 +1,64 @@
+import { notFound } from "next/navigation";
 import { ProductCard } from "@/components/ProductCard";
-import { ProductsGrid } from "@/components/ProductsGrid";
-import { Card } from "@/components/ui";
-import { getProducts } from "@/mock/products";
+import { ProductGrid } from "@/components/ProductGrid";
+import {
+  Card,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui";
+import { getProducts } from "@/constants/mock/product";
 import { Filters } from "./_components/Filters";
 import styles from "./page.module.css";
+
+const SELECT_ITEMS = [
+  { label: "Популярные", value: null },
+  { label: "Новинки", value: "new" },
+  { label: "Дешевле", value: "cheaper" },
+  { label: "Дороже", value: "expensive" },
+  { label: "С высоким рейтингом", value: "high" },
+];
 
 const CatalogPage = () => {
   const products = getProducts();
 
   return (
-    <div className="container">
+    <main className="container">
       <div className={styles.layout}>
         <Card className="desktop-only">
           <Filters />
         </Card>
 
-        <ProductsGrid>
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </ProductsGrid>
+        <div className={styles.content}>
+          <Select items={SELECT_ITEMS}>
+            <SelectTrigger>
+              <SelectValue />
+            </SelectTrigger>
+
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Сортировка</SelectLabel>
+                {SELECT_ITEMS.map((item) => (
+                  <SelectItem key={item.value} value={item.value}>
+                    {item.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
+          <ProductGrid>
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </ProductGrid>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

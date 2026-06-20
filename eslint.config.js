@@ -6,6 +6,7 @@ export default antfu(
     markdown: false,
     perfectionist: false,
     react: true,
+    nextjs: true,
     ignores: ["package.json"],
   },
   {

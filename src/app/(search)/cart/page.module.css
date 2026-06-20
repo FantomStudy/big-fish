@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 36px;
 }
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

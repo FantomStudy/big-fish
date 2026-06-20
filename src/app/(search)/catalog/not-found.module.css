@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl);
+  }
+  .image {
+    width: 320px;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .text {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg);
+  }
+  .image {
+    width: 280px;
+  }
+}

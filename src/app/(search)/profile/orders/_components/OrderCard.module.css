@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.barcode {
+  height: 72px;
+}
+
+.body {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 280px;
+  padding-right: 32px;
+}
+
+.status {
+  font-weight: var(--font-weight-semibold);
+}
+
+.statusActive {
+  font-weight: var(--font-weight-semibold);
+  color: var(--brand);
+}
+
+.pickupPoint {
+  font-weight: var(--font-weight-medium);
+}
+
+.muted {
+  color: var(--muted-foreground);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.products {
+  display: flex;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 0 32px;
+  list-style: none;
+  overflow-x: auto;
+  border-left: 1px solid var(--border);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 104px;
+}
+
+.productImage {
+  width: 104px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.price {
+  margin-top: 8px;
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 1024px) {
+  .body {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .info {
+    width: auto;
+    padding-right: 0;
+  }
+
+  .products {
+    flex: none;
+    width: 100%;
+    padding: 24px 0 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}

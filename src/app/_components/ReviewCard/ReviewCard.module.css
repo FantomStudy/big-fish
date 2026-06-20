@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image {
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  flex-shrink: 0;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  width: 72px;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+  color: var(--muted-foreground);
+}
+
+.starFilled {
+  color: var(--brand-secondary);
+}
+
+.product {
+  color: var(--muted-foreground);
+}
+
+.text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.textExpanded {
+  -webkit-line-clamp: unset;
+}
+
+.toggle {
+  align-self: flex-end;
+  margin-top: auto;
+}

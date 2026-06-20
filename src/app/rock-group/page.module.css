@@ -1,6 +1,4 @@
-.page {
-  margin-top: -16px;
-}
+
 
 .content {
   display: flex;
@@ -8,12 +6,12 @@
   gap: 36px;
 }
 
-.accented {
+.accent {
   background-color: var(--accent);
   padding: 64px 0;
 }
 
-.accentedWrapper {
+.accentWrapper {
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -61,7 +59,7 @@
   }
 }
 
-.backstageSection {
+.backstage {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +95,7 @@
     }
   }
 
-  .backstageSection img {
+  .backstage img {
     width: 100%;
     height: auto;
   }

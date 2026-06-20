@@ -16,5 +16,6 @@ export default defineConfig({
     ],
     newlinesBetween: false,
   },
+  sortTailwindcss: true,
   ignorePatterns: ["**/*.mdx"],
 });
