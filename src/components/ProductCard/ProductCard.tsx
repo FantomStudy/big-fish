@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Route } from "next";
+import type { Route } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
@@ -35,7 +35,7 @@ export const ProductCard = ({ product, className, ...props }: ProductCardProps) 
       </div>
 
       <Link href={productHref} className={styles.info}>
-        <Typography className={styles.price}>{toCurrency(product.price)}</Typography>
+        <Typography variant="text-xl" className={styles.price}>{toCurrency(product.price)}</Typography>
 
         <div className={styles.properties}>
           <Typography variant="text-sm" className={styles.name}>

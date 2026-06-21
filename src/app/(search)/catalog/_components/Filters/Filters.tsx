@@ -10,7 +10,7 @@ import {
   Field,
   FieldLabel,
 } from "@/components/ui";
-import { CATEGORIES, COLORS, USAGE_TYPE } from "./constants";
+import { CATEGORIES, COLORS, PRICE_DEFAULTS, USAGE_TYPE } from "./constants";
 import styles from "./Filters.module.css";
 
 export const Filters = () => {
@@ -34,14 +34,23 @@ export const Filters = () => {
         <Typography>Цена</Typography>
         <div className={styles.inputs}>
           <Field>
-            <FieldLabel>От</FieldLabel>
-            <Input />
+            <Input placeholder="От" />
           </Field>
           <Field>
-            <FieldLabel>До</FieldLabel>
-            <Input />
+            <Input placeholder="До" />
           </Field>
         </div>
+
+        <RadioGroup>
+          {PRICE_DEFAULTS.map((type) => (
+            <Field key={type.id}>
+              <FieldLabel>
+                <RadioGroupItem value={type.id} />
+                {type.name}
+              </FieldLabel>
+            </Field>
+          ))}
+        </RadioGroup>
       </div>
 
       <div className={styles.section}>
@@ -63,12 +72,10 @@ export const Filters = () => {
         <Slider min={1} max={200} defaultValue={[1, 200]} />
         <div className={styles.inputs}>
           <Field>
-            <FieldLabel>От</FieldLabel>
-            <Input />
+            <Input placeholder="От" />
           </Field>
           <Field>
-            <FieldLabel>До</FieldLabel>
-            <Input />
+            <Input placeholder="До" />
           </Field>
         </div>
       </div>
@@ -89,17 +96,16 @@ export const Filters = () => {
 
       <div className={styles.section}>
         <Typography>Количество в упаковке, шт</Typography>
-        <Slider min={1} max={4} defaultValue={[1, 4]} />
-        <div className={styles.inputs}>
-          <Field>
-            <FieldLabel>От</FieldLabel>
-            <Input />
-          </Field>
-          <Field>
-            <FieldLabel>До</FieldLabel>
-            <Input />
-          </Field>
-        </div>
+        <RadioGroup>
+          {Array.from({ length: 4 }).map((_, id) => (
+            <Field key={id}>
+              <FieldLabel>
+                <RadioGroupItem value={id + 1} />
+                {id + 1}
+              </FieldLabel>
+            </Field>
+          ))}
+        </RadioGroup>
       </div>
 
       <div className={styles.section}>
@@ -108,12 +114,10 @@ export const Filters = () => {
 
         <div className={styles.inputs}>
           <Field>
-            <FieldLabel>От</FieldLabel>
-            <Input />
+            <Input placeholder="От" />
           </Field>
           <Field>
-            <FieldLabel>До</FieldLabel>
-            <Input />
+            <Input placeholder="До" />
           </Field>
         </div>
       </div>
