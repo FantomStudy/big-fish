@@ -167,3 +167,19 @@ export const RuIcon = (props: IconProps) => (
     />
   </svg>
 );
+
+export const VanIcon = (props: IconProps) => {
+  return (
+    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <circle cx="41.9846" cy="49.8567" r="5.24807" stroke="#33363F" stroke-width="3" />
+      <circle cx="23.6164" cy="49.8567" r="5.24807" stroke="#33363F" stroke-width="3" />
+      <path
+        d="M52.4807 34.1125V29.3451C52.4807 29.0413 52.3427 28.754 52.1054 28.5642L39.3606 18.3683H28.8644V36.7365H13.1202M28.8644 18.3683V23.6164H10.4962V47.8567C10.4962 48.9613 11.3916 49.8567 12.4962 49.8567H18.3683M44.6086 23.6164H41.9846V34.1125H52.4807M52.4807 34.1125V47.8567C52.4807 48.9613 51.5853 49.8567 50.4807 49.8567H47.2327M36.7365 49.8567H28.8644"
+        stroke="#33363F"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

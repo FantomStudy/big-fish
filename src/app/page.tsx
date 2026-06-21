@@ -1,9 +1,8 @@
-import { VanIcon } from "lucide-react";
 import Image from "next/image";
 import { NewsSection } from "@/components/NewsSection";
 import { ProductCard } from "@/components/ProductCard";
 import { SearchBar } from "@/components/SearchBar";
-import { BrandTitle, Carousel, RuIcon, ScrollCarousel, Typography } from "@/components/ui";
+import { BrandTitle, Carousel, RuIcon, ScrollCarousel, Typography, VanIcon } from "@/components/ui";
 import { getCategories } from "@/constants/mock/categories";
 import { getCollection } from "@/constants/mock/collections";
 import { getProducts } from "@/constants/mock/product";

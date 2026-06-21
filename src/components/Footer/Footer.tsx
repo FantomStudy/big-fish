@@ -14,27 +14,30 @@ interface Block {
   }>;
 }
 
-export const BLOCKS: Block[] = [
-  {
-    name: "Компания",
-    links: [
-      { label: "О нас", href: "/" },
-      { label: "Отзывы клиентов", href: "/" },
-      { label: "Новости", href: "/news" },
-      { label: "Контакты", href: "/contacts" },
-    ],
-  },
-  {
-    name: "Информация",
-    links: [
-      { label: "Как сделать заказ", href: "/" },
-      { label: "Оплата", href: "/" },
-      { label: "Условия доставки", href: "/" },
-      { label: "Обмен и возврат", href: "/" },
-      { label: "Персональные данные", href: "/" },
-    ],
-  },
-] as const;
+const COMPANY_BLOCK: Block = {
+  name: "Компания",
+  links: [
+    { label: "О нас", href: "/" },
+    { label: "Отзывы клиентов", href: "/" },
+    { label: "Новости", href: "/news" },
+    { label: "Контакты", href: "/contacts" },
+  ],
+};
+
+const INFO_BLOCK = {
+  name: "Информация",
+  links: [
+    { label: "Как сделать заказ", href: "/" },
+    { label: "Оплата", href: "/" },
+    { label: "Условия доставки", href: "/" },
+    { label: "Пользовательское соглашение", href: "/пользовательское_соглашение.docx" },
+    { label: "Публичая оферта", href: "/публичная_оферта.docx" },
+    {
+      label: "Политика конфиденциальности",
+      href: "/политика_конфиденциальности.docx",
+    },
+  ],
+};
 
 export const Footer = () => {
   return (
@@ -45,16 +48,23 @@ export const Footer = () => {
             <Image src="/logo.svg" alt="logo" width={124} height={84} />
           </Link>
 
-          {BLOCKS.map((block) => (
-            <div key={block.name} className={styles.block}>
-              <Typography className={styles.blockTitle}>{block.name}</Typography>
-              {block.links.map((link) => (
-                <Link key={link.label} href={link.href} className={styles.blockLink}>
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          ))}
+          <div className={styles.block}>
+            <Typography className={styles.blockTitle}>{COMPANY_BLOCK.name}</Typography>
+            {COMPANY_BLOCK.links.map((link) => (
+              <Link key={link.label} href={link.href} className={styles.blockLink}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className={styles.block}>
+            <Typography className={styles.blockTitle}>{INFO_BLOCK.name}</Typography>
+            {INFO_BLOCK.links.map((link) => (
+              <a key={link.label} href={link.href} className={styles.blockLink}>
+                {link.label}
+              </a>
+            ))}
+          </div>
 
           <div className={styles.block}>
             <Typography className={styles.blockTitle}>Мы в сети</Typography>
