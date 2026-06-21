@@ -81,6 +81,8 @@
   --muted-foreground: var(--color-neutral-500);
 
   --accent: #3a3a3af7;
+  --accent-transparent: rgba(0, 0, 0, 71%);
+  --accent-transparent-medium: rgba(148, 148, 148, 42%);
   --accent-foreground: #ffffff;
   --accent-foreground-muted: var(--color-neutral-300);
 

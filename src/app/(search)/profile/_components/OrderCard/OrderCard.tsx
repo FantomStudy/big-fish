@@ -16,7 +16,7 @@ interface OrderCardProps {
 
 export const OrderCard = ({ order }: OrderCardProps) => {
   return (
-    <Card className={styles.card}>
+    <Card variant="medium" className={styles.card}>
       <Image src={order.src} alt={order.alt} width={75} height={100} />
       <div className={styles.info}>
         <Typography className={styles.status}>{order.status}</Typography>

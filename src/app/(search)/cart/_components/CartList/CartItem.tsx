@@ -12,7 +12,7 @@ interface CartItemProps {
 
 export const CartItem = ({ product }: CartItemProps) => {
   return (
-    <Card className={styles.card}>
+    <Card variant="medium" className={styles.card}>
       <Checkbox className={styles.checkbox} />
       <Image
         src={product.imageUrl}
@@ -35,7 +35,7 @@ export const CartItem = ({ product }: CartItemProps) => {
         </div>
 
         <div className={styles.amount}>
-          <Typography variant="text-sm" className={styles.price}>
+          <Typography variant="text-lg" className={styles.price}>
             {toCurrency(product.price)}
           </Typography>
           <NumberInput />

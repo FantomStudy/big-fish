@@ -4,6 +4,20 @@
   padding: 20px;
 }
 
+.dark {
+  background-color: var(--accent-transparent);
+  color: var(--accent-foreground);
+
+  input {
+    color: var(--accent-foreground);
+    background-color: transparent;
+  }
+}
+
+.medium {
+  background-color: var(--accent-transparent-medium);
+}
+
 @media (max-width: 768px) {
   .card {
     padding: 16px;

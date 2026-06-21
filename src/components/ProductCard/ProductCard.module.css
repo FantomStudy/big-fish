@@ -1,6 +1,7 @@
 .card {
   border-radius: var(--radius-xl);
   padding: 0;
+  background-color: #949494;
 
   display: flex;
   flex-direction: column;

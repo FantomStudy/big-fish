@@ -20,6 +20,13 @@
   gap: 16px;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .layout {
     display: flex;

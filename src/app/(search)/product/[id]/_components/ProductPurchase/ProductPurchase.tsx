@@ -7,7 +7,7 @@ import { Button, Card, NumberInput } from "@/components/ui";
 import { toCurrency } from "@/lib/format";
 import styles from "./ProductPurchase.module.css";
 
-interface ProductPurchaseProps extends React.ComponentProps<typeof Card> {
+interface ProductPurchaseProps extends Omit<React.ComponentProps<typeof Card>, "variant"> {
   price: number;
   oldPrice?: number;
   article: string;
@@ -23,7 +23,7 @@ export const ProductPurchase = ({
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <Card className={clsx(styles.card, className)} {...props}>
+    <Card variant="dark" className={clsx(styles.card, className)} {...props}>
       <div className={styles.top}>
         <div className={styles.prices}>
           <span className={styles.price}>{toCurrency(price)}</span>

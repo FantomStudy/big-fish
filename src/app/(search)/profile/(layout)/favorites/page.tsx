@@ -27,7 +27,7 @@ const FavoritesPage = () => {
       </Typography>
 
       <Select items={SELECT_ITEMS}>
-        <SelectTrigger>
+        <SelectTrigger variant="dark">
           <SelectValue />
         </SelectTrigger>
 

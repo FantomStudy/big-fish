@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--accent);
+  background-color: var(--accent-transparent);
   color: var(--accent-foreground);
   margin-top: 16px;
 }

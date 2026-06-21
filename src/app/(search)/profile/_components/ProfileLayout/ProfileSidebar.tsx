@@ -20,7 +20,7 @@ export const ProfileSidebar = ({ user }: ProfileSidebarProps) => {
   };
 
   return (
-    <Card className={styles.card}>
+    <Card variant="medium" className={styles.card}>
       <header className={styles.header}>
         <Avatar src={user.avatarUrl} fallback={user.avatarUrl} />
 

@@ -59,7 +59,7 @@
 
 /* Accent */
 .accent {
-  background-color: var(--accent);
+  background-color: var(--accent-transparent);
   padding: 32px 0;
 }
 

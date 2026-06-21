@@ -6,7 +6,7 @@ import styles from "./OrderForm.module.css";
 
 export const OrderForm = () => {
   return (
-    <Card>
+    <Card variant="medium">
       <form className={styles.form}>
         <UserSection />
         <DeliverySection />

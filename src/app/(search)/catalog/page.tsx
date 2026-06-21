@@ -29,13 +29,13 @@ const CatalogPage = () => {
   return (
     <main className="container">
       <div className={styles.layout}>
-        <Card className="desktop-only">
+        <Card variant="dark" className="desktop-only">
           <Filters />
         </Card>
 
         <div className={styles.content}>
           <Select items={SELECT_ITEMS}>
-            <SelectTrigger>
+            <SelectTrigger variant="dark">
               <SelectValue />
             </SelectTrigger>
 

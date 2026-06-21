@@ -11,7 +11,7 @@ type OrderCardProps =
 
 export const OrderCard = (props: OrderCardProps) => {
   return (
-    <Card className={styles.card}>
+    <Card variant={props.variant === "completed" ? "medium" : "default"} className={styles.card}>
       {props.variant === "active" && <Barcode className={styles.barcode} />}
 
       <div className={styles.body}>
@@ -31,7 +31,7 @@ export const OrderCard = (props: OrderCardProps) => {
               <Typography variant="text-lg" className={styles.status}>
                 {props.order.status}
               </Typography>
-              <Typography className={styles.muted}>{props.order.delivery}</Typography>
+              <Typography>{props.order.delivery}</Typography>
               <div className={styles.actions}>
                 <Button size="sm">Оценить товар</Button>
                 <Button size="sm" variant="outline">
@@ -53,9 +53,7 @@ export const OrderCard = (props: OrderCardProps) => {
                 height={138}
               />
               <Typography className={styles.price}>{toCurrency(product.price)}</Typography>
-              <Typography variant="text-sm" className={styles.muted}>
-                Хранится до {product.storedUntil}
-              </Typography>
+              <Typography variant="text-sm">Хранится до {product.storedUntil}</Typography>
             </li>
           ))}
         </ul>

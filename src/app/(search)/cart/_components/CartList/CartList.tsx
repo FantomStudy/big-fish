@@ -34,7 +34,7 @@ export const CartList = ({ products }: CartListProps) => {
         {products.length === 0 ? (
           <EmptyScreen />
         ) : (
-          <div className="stack-sm">
+          <div className={styles.cards}>
             {products.map((product) => (
               <CartItem key={product.id} product={product} />
             ))}

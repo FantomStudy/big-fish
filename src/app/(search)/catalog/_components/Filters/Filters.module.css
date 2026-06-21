@@ -13,7 +13,6 @@
 .inputs {
   display: flex;
   gap: 8px;
-  color: var(--muted-foreground);
 }
 
 .colors {

@@ -144,7 +144,7 @@
   font-weight: 400;
   text-align: left;
   text-decoration: none;
-  color: var(--foreground);
+  color: inherit;
 }
 
 .ghost {
