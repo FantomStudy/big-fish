@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Route } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/AddToCartButton";
@@ -18,7 +19,7 @@ interface ProductCardProps extends React.ComponentProps<"div"> {
 }
 
 export const ProductCard = ({ product, className, ...props }: ProductCardProps) => {
-  const productHref = `/product/${product.id}`;
+  const productHref = `/product/${product.id}` as Route;
 
   return (
     <Card className={clsx(styles.card, className)} {...props}>

@@ -163,7 +163,7 @@ export const RuIcon = (props: IconProps) => (
       height="42.339"
       rx="18.5"
       stroke="#33363F"
-      stroke-width="3"
+      strokeWidth="3"
     />
   </svg>
 );
